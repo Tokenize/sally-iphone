@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
+		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
+		B851F7811897327E0099A787 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserTests.m */; };
+		B851F784189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
+		B851F785189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
+		B851F787189742A80099A787 /* TripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F786189742A80099A787 /* TripTests.m */; };
 		B859630A1888BEAE000588B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85963091888BEAE000588B1 /* Foundation.framework */; };
 		B859630C1888BEAE000588B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630B1888BEAE000588B1 /* CoreGraphics.framework */; };
 		B859630E1888BEAE000588B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630D1888BEAE000588B1 /* UIKit.framework */; };
@@ -34,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		B851F7801897327E0099A787 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		B851F782189741A60099A787 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		B851F783189741A60099A787 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		B851F786189742A80099A787 /* TripTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTests.m; sourceTree = "<group>"; };
 		B85963061888BEAE000588B1 /* Sally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85963091888BEAE000588B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B859630B1888BEAE000588B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +91,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B851F77A1897322C0099A787 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B851F77B189732560099A787 /* User.h */,
+				B851F77C189732560099A787 /* User.m */,
+				B851F782189741A60099A787 /* Trip.h */,
+				B851F783189741A60099A787 /* Trip.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B851F77F189732630099A787 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B851F7801897327E0099A787 /* UserTests.m */,
+				B851F786189742A80099A787 /* TripTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		B85962FD1888BEAE000588B1 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +144,7 @@
 		B859630F1888BEAE000588B1 /* Sally */ = {
 			isa = PBXGroup;
 			children = (
+				B851F77A1897322C0099A787 /* Models */,
 				B85963181888BEAE000588B1 /* AppDelegate.h */,
 				B85963191888BEAE000588B1 /* AppDelegate.m */,
 				B859631B1888BEAE000588B1 /* Main.storyboard */,
@@ -137,6 +170,7 @@
 		B859632E1888BEAE000588B1 /* SallyTests */ = {
 			isa = PBXGroup;
 			children = (
+				B851F77F189732630099A787 /* Models */,
 				B85963341888BEAE000588B1 /* SallyTests.m */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
 			);
@@ -249,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B851F784189741A60099A787 /* Trip.m in Sources */,
+				B851F77D189732560099A787 /* User.m in Sources */,
 				B85963201888BEAE000588B1 /* ViewController.m in Sources */,
 				B859631A1888BEAE000588B1 /* AppDelegate.m in Sources */,
 				B85963161888BEAE000588B1 /* main.m in Sources */,
@@ -259,7 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B851F785189741A60099A787 /* Trip.m in Sources */,
+				B851F77E189732560099A787 /* User.m in Sources */,
 				B85963351888BEAE000588B1 /* SallyTests.m in Sources */,
+				B851F787189742A80099A787 /* TripTests.m in Sources */,
+				B851F7811897327E0099A787 /* UserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +500,7 @@
 				B859633A1888BEAE000588B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B859633B1888BEAE000588B1 /* Build configuration list for PBXNativeTarget "SallyTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +509,7 @@
 				B859633D1888BEAE000588B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
