@@ -26,7 +26,6 @@
 		B859632A1888BEAE000588B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85963091888BEAE000588B1 /* Foundation.framework */; };
 		B859632B1888BEAE000588B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630D1888BEAE000588B1 /* UIKit.framework */; };
 		B85963331888BEAE000588B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85963311888BEAE000588B1 /* InfoPlist.strings */; };
-		B85963351888BEAE000588B1 /* SallyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B85963341888BEAE000588B1 /* SallyTests.m */; };
 		B88ADB5118989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5218989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationTests.m */; };
@@ -67,7 +66,6 @@
 		B85963281888BEAE000588B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B85963301888BEAE000588B1 /* SallyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SallyTests-Info.plist"; sourceTree = "<group>"; };
 		B85963321888BEAE000588B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B85963341888BEAE000588B1 /* SallyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SallyTests.m; sourceTree = "<group>"; };
 		B88ADB4F18989A2800E4BD4A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		B88ADB5018989A2800E4BD4A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		B88ADB5318989F1E00E4BD4A /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				B851F77F189732630099A787 /* Models */,
-				B85963341888BEAE000588B1 /* SallyTests.m */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
 			);
 			path = SallyTests;
@@ -307,7 +304,6 @@
 			files = (
 				B851F785189741A60099A787 /* Trip.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
-				B85963351888BEAE000588B1 /* SallyTests.m in Sources */,
 				B851F787189742A80099A787 /* TripTests.m in Sources */,
 				B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
