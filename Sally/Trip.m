@@ -9,6 +9,9 @@
 #import "Trip.h"
 
 @implementation Trip
+{
+    NSMutableArray *locationsList;
+}
 
 @synthesize name;
 @synthesize description;
@@ -26,9 +29,20 @@
         startAt = [start copy];
         description = [aDescription copy];
         endAt = [end copy];
+        locationsList = [[NSMutableArray alloc] init];
     }
     
     return self;
+}
+
+- (void)addLocation:(Location *)newLocation
+{
+    [locationsList addObject: newLocation];
+}
+
+- (NSArray *)locations
+{
+    return locationsList;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface Trip : NSObject
 
@@ -14,7 +15,10 @@
 @property (readonly) NSString *description;
 @property (readonly) NSDate *startAt;
 @property (readonly) NSDate *endAt;
+@property (readonly) NSArray *locations;
 
 - (id)initWithName:(NSString *)aName description:(NSString *)aDescription startAt:(NSDate *)start endDate:(NSDate *)end;
+
+- (void)addLocation:(Location *)newLocation;
 
 @end

@@ -91,4 +91,43 @@
     newTrip = nil;
 }
 
+- (void)testThatTripHasNoLocationsInitially
+{
+    XCTAssertEqual([[trip locations] count], (NSUInteger)0, @"Trip has no locations initially.");
+}
+
+- (void)testThatTripCanHaveLocationsAdded
+{
+    Location *newLocation = [[Location alloc] init];
+    
+    XCTAssertNoThrow([trip addLocation: newLocation], @"Must be able to add locations to Trip");
+}
+
+- (void)testThatTripReturnsLocationsInTheOrderAdded
+{
+    Location *newLocation1 = [[Location alloc] init];
+    Location *newLocation2 = [[Location alloc] init];
+    Location *newLocation3 = [[Location alloc] init];
+    
+    newLocation1.time = [NSDate distantPast];
+    newLocation2.time = [NSDate distantFuture];
+    newLocation3.direction = @"South";
+    
+    [trip addLocation: newLocation1];
+    [trip addLocation: newLocation2];
+    [trip addLocation: newLocation3];
+    
+    NSArray *locations = trip.locations;
+    
+    XCTAssertEqual([locations firstObject], newLocation1, @"The first location should be returned first");
+    XCTAssertEqual([locations objectAtIndex: 1], newLocation2, @"The second location should be returned second");
+    XCTAssertEqual([locations lastObject], newLocation3, @"The third location should be returned last");
+    
+    newLocation1 = nil;
+    newLocation2 = nil;
+    newLocation3 = nil;
+    
+    locations = nil;
+}
+
 @end
