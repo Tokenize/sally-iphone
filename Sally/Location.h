@@ -10,6 +10,7 @@
 
 @interface Location : NSObject
 
+@property NSUInteger locationId;
 @property NSDate *time;
 @property NSString *direction;
 @property NSNumber *latitude;

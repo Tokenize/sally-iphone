@@ -10,6 +10,7 @@
 
 @implementation Location
 
+@synthesize locationId;
 @synthesize time;
 @synthesize direction;
 @synthesize latitude;

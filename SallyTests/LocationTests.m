@@ -29,6 +29,18 @@
     [super tearDown];
 }
 
+- (void)testThatLocationHasAnIdOfZeroInitially
+{
+    XCTAssertEqual(location.locationId, (NSUInteger)0, @"Location ID should have a default value of zero");
+}
+
+- (void)testThatLocationHasCorrectLocationId
+{
+    location.locationId = 6;
+    
+    XCTAssertEqual(location.locationId, (NSUInteger)6, @"Location should have the correct ID");
+}
+
 - (void)testThatLocationHasCorrectTime
 {
     location.time = [NSDate distantPast];

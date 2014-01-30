@@ -11,6 +11,7 @@
 
 @interface Trip : NSObject
 
+@property NSUInteger tripId;
 @property (readonly) NSString *name;
 @property (readonly) NSString *description;
 @property (readonly) NSDate *startAt;

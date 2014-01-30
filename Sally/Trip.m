@@ -13,6 +13,7 @@
     NSMutableArray *locationsList;
 }
 
+@synthesize tripId;
 @synthesize name;
 @synthesize description;
 @synthesize startAt;

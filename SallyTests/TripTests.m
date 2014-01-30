@@ -31,6 +31,18 @@
     [super tearDown];
 }
 
+- (void)testThatTripHasAnIdOfZeroInitially
+{
+    XCTAssertEqual(trip.tripId, (NSUInteger)0, @"Trip ID should have a default value of zero");
+}
+
+- (void)testThatTripHasCorrectId
+{
+    trip.tripId = 5;
+    
+    XCTAssertEqual(trip.tripId, (NSUInteger)5, @"Trip should have the correct ID");
+}
+
 - (void)testThatTripHasCorrectName
 {
     XCTAssertEqualObjects(trip.name, @"Morning walk", @"Trip should have the correct name");
