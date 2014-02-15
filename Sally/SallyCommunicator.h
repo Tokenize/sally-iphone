@@ -1,5 +1,5 @@
 //
-//  SallyManagerDelegate.h
+//  SallyCommunicator.h
 //  Sally
 //
 //  Created by Zaid Al-Jarrah on 2/2/2014.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
-@protocol SallyManagerDelegate <NSObject>
+@interface SallyCommunicator : NSObject
 
-- (void)fetchingTripsFailedWithError:(NSError *)error;
+- (void)fetchTripsForUser:(User *)user;
 
 @end

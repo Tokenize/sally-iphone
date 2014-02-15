@@ -11,6 +11,10 @@
 @implementation SallyManager
 
 @synthesize delegate;
+@synthesize communicator;
+@synthesize user;
+
+NSString *SallyManagerErrors = @"SallyManagerError";
 
 - (void)setDelegate:(id<SallyManagerDelegate>)newDelegate
 {
@@ -23,4 +27,19 @@
     delegate = newDelegate;
 }
 
+- (void)fetchTrips
+{
+    [communicator fetchTripsForUser: user];
+}
+
+- (void)fetchingTripsFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorTripFetchCode userInfo: errorInfo];
+    
+    [delegate fetchingTripsFailedWithError: reportableError];
+}
+
 @end
+
+

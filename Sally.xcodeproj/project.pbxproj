@@ -29,6 +29,9 @@
 		B88ADB5118989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5218989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationTests.m */; };
+		B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */; };
+		B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
+		B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
 		B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
 		B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
 		B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A99189F23BC003A80A0 /* TripCreationTests.m */; };
@@ -73,6 +76,10 @@
 		B88ADB4F18989A2800E4BD4A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		B88ADB5018989A2800E4BD4A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		B88ADB5318989F1E00E4BD4A /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicator.h; sourceTree = "<group>"; };
+		B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicator.m; sourceTree = "<group>"; };
+		B8E42CF0189F30C300305874 /* SallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicator.h; sourceTree = "<group>"; };
+		B8E42CF1189F30C300305874 /* SallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicator.m; sourceTree = "<group>"; };
 		B8F01A95189F2282003A80A0 /* SallyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManager.h; sourceTree = "<group>"; };
 		B8F01A96189F2282003A80A0 /* SallyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyManager.m; sourceTree = "<group>"; };
 		B8F01A99189F23BC003A80A0 /* TripCreationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripCreationTests.m; sourceTree = "<group>"; };
@@ -172,6 +179,8 @@
 				B85963101888BEAE000588B1 /* Supporting Files */,
 				B8F01A95189F2282003A80A0 /* SallyManager.h */,
 				B8F01A96189F2282003A80A0 /* SallyManager.m */,
+				B8E42CF0189F30C300305874 /* SallyCommunicator.h */,
+				B8E42CF1189F30C300305874 /* SallyCommunicator.m */,
 			);
 			path = Sally;
 			sourceTree = "<group>";
@@ -220,6 +229,8 @@
 			children = (
 				B8F01A9F189F2702003A80A0 /* MockSallyManagerDelegate.h */,
 				B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */,
+				B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */,
+				B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -325,6 +336,7 @@
 				B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */,
 				B851F77D189732560099A787 /* User.m in Sources */,
 				B85963201888BEAE000588B1 /* ViewController.m in Sources */,
+				B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B859631A1888BEAE000588B1 /* AppDelegate.m in Sources */,
 				B88ADB5118989A2800E4BD4A /* Location.m in Sources */,
 				B85963161888BEAE000588B1 /* main.m in Sources */,
@@ -336,11 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B851F785189741A60099A787 /* Trip.m in Sources */,
+				B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */,
 				B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
 				B851F787189742A80099A787 /* TripTests.m in Sources */,
 				B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */,
 				B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */,
+				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
 				B851F7811897327E0099A787 /* UserTests.m in Sources */,

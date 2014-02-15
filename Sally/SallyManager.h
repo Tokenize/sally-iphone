@@ -8,9 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "SallyManagerDelegate.h"
+#import "SallyCommunicator.h"
 
 @interface SallyManager : NSObject
 
+extern NSString *SallyManagerErrors;
+
+enum {
+    SallyManagerErrorTripFetchCode
+};
+
+#pragma mark - Properties
+
 @property (weak, nonatomic) id<SallyManagerDelegate> delegate;
+@property SallyCommunicator *communicator;
+@property User *user;
+
+#pragma mark - Trip Methods
+
+- (void)fetchTrips;
+- (void)fetchingTripsFailedWithError:(NSError *)error;
 
 @end
