@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SallyManagerDelegate.h"
 #import "SallyCommunicator.h"
+#import "TripBuilder.h"
 
 @interface SallyManager : NSObject
 
@@ -23,10 +24,12 @@ enum {
 @property (weak, nonatomic) id<SallyManagerDelegate> delegate;
 @property SallyCommunicator *communicator;
 @property User *user;
+@property TripBuilder *tripBuilder;
 
 #pragma mark - Trip Methods
 
 - (void)fetchTrips;
 - (void)fetchingTripsFailedWithError:(NSError *)error;
+- (void)receivedTripsJSON:(NSString *)objectNotation;
 
 @end

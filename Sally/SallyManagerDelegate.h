@@ -11,5 +11,6 @@
 @protocol SallyManagerDelegate <NSObject>
 
 - (void)fetchingTripsFailedWithError:(NSError *)error;
+- (void)didReceivedTrips:(NSArray *)trips;
 
 @end

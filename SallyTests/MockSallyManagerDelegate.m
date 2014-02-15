@@ -11,10 +11,16 @@
 @implementation MockSallyManagerDelegate
 
 @synthesize fetchError;
+@synthesize receivedTrips;
 
 - (void)fetchingTripsFailedWithError:(NSError *)error
 {
     self.fetchError = error;
+}
+
+- (void)didReceivedTrips:(NSArray *)trips
+{
+    self.receivedTrips = trips;
 }
 
 @end
