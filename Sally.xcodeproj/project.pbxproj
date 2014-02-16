@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82817C018B0360B00D362F6 /* TripBuilderTests.m */; };
 		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F7811897327E0099A787 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserTests.m */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B82817C018B0360B00D362F6 /* TripBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilderTests.m; sourceTree = "<group>"; };
 		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B851F7801897327E0099A787 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				B851F77F189732630099A787 /* Models */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
 				B8F01A99189F23BC003A80A0 /* TripCreationTests.m */,
+				B82817C018B0360B00D362F6 /* TripBuilderTests.m */,
 			);
 			path = SallyTests;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				B851F785189741A60099A787 /* Trip.m in Sources */,
 				B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */,
+				B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */,
 				B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
 				B851F787189742A80099A787 /* TripTests.m in Sources */,

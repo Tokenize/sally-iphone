@@ -10,6 +10,13 @@
 
 @interface TripBuilder : NSObject
 
+extern NSString *TripBuilderErrors;
+
+enum {
+    TripBuilderInvalidJSONError,
+    TripBuilderMissingDataError
+};
+
 - (NSArray *)tripsFromJSON:(NSString *)objectNotation error:(NSError **)error;
 
 @end
