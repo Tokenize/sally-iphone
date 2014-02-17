@@ -7,6 +7,7 @@
 //
 
 #import "Trip.h"
+#import "Location.h"
 
 @implementation Trip
 {

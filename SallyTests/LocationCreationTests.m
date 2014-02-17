@@ -12,6 +12,7 @@
 #import "MockSallyCommunicator.h"
 #import "FakeLocationBuilder.h"
 #import "Location.h"
+#import "Trip.h"
 
 @interface LocationCreationTests : XCTestCase
 {

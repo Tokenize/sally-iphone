@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Location.h"
+
+// Forward Declarations
+@class Location;
 
 @interface Trip : NSObject
 

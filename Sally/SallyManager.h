@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SallyManagerDelegate.h"
-#import "SallyCommunicator.h"
-#import "TripBuilder.h"
-#import "LocationBuilder.h"
-#import "Trip.h"
+
+// Forward Declarations (Protocols)
+@protocol SallyManagerDelegate;
+
+// Forward Declarations (Classes)
+@class LocationBuilder;
+@class SallyCommunicator;
+@class Trip;
+@class TripBuilder;
+@class User;
 
 @interface SallyManager : NSObject
 

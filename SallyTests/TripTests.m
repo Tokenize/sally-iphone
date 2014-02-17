@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Trip.h"
+#import "Location.h"
 
 @interface TripTests : XCTestCase
 {

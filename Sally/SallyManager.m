@@ -7,6 +7,12 @@
 //
 
 #import "SallyManager.h"
+#import "SallyManagerDelegate.h"
+#import "SallyCommunicator.h"
+#import "TripBuilder.h"
+#import "LocationBuilder.h"
+#import "Trip.h"
+#import "User.h"
 
 @implementation SallyManager
 
