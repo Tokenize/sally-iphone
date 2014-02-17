@@ -12,6 +12,7 @@
 
 @synthesize fetchError;
 @synthesize receivedTrips;
+@synthesize receivedLocations;
 
 - (void)fetchingTripsFailedWithError:(NSError *)error
 {
@@ -21,6 +22,16 @@
 - (void)didReceivedTrips:(NSArray *)trips
 {
     self.receivedTrips = trips;
+}
+
+- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error
+{
+    self.fetchError = error;
+}
+
+- (void)didReceivedLocations:(NSArray *)locations
+{
+    self.receivedLocations = locations;
 }
 
 @end

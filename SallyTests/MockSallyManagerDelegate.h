@@ -13,5 +13,6 @@
 
 @property NSError *fetchError;
 @property NSArray *receivedTrips;
+@property NSArray *receivedLocations;
 
 @end

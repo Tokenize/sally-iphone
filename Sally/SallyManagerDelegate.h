@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+// Forward Declarations
+@class Trip;
+
 @protocol SallyManagerDelegate <NSObject>
 
 - (void)fetchingTripsFailedWithError:(NSError *)error;
+- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error;
+
 - (void)didReceivedTrips:(NSArray *)trips;
+- (void)didReceivedLocations:(NSArray *)locations;
 
 @end

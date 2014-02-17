@@ -14,6 +14,7 @@
 @synthesize communicator;
 @synthesize user;
 @synthesize tripBuilder;
+@synthesize locationBuilder;
 
 NSString *SallyManagerErrors = @"SallyManagerError";
 
@@ -61,6 +62,42 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     }
     else {
         [delegate didReceivedTrips: trips];
+    }
+}
+
+- (void)fetchLocationsForTrip:(Trip *)trip
+{
+    [communicator fetchLocationsForTrip: trip];
+}
+
+- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorLocationFetchCode userInfo: errorInfo];
+    
+    [delegate fetchingLocationsForTrip: trip failedWithError: reportableError];
+}
+
+- (void)receivedLocationsJSON:(NSString *)objectNotation forTrip:(Trip *)trip
+{
+    NSError *error = nil;
+    NSArray *locations = [locationBuilder locationsFromJSON: objectNotation error: &error];
+    
+    if (!locations) {
+        NSDictionary *errorInfo = nil;
+        
+        if (error) {
+            errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+        }
+        
+        NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors
+                                                       code: SallyManagerErrorLocationFetchCode
+                                                   userInfo: errorInfo];
+        
+        [delegate fetchingLocationsForTrip: trip failedWithError: reportableError];
+    }
+    else {
+        [delegate didReceivedLocations: locations];
     }
 }
 

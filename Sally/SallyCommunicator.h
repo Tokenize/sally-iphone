@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "User.h"
+
+// Forward declarations
+@class Trip;
+@class User;
 
 @interface SallyCommunicator : NSObject
 
 - (void)fetchTripsForUser:(User *)user;
+- (void)fetchLocationsForTrip:(Trip *)trip;
 
 @end

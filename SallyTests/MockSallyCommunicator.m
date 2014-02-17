@@ -11,10 +11,16 @@
 @implementation MockSallyCommunicator
 
 @synthesize wasAskedToFetchTrips;
+@synthesize wasAskedToFetchLocations;
 
 - (void)fetchTripsForUser:(User *)user
 {
     wasAskedToFetchTrips = true;
+}
+
+- (void)fetchLocationsForTrip:(Trip *)trip
+{
+    wasAskedToFetchLocations = true;
 }
 
 @end

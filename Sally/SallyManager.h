@@ -10,13 +10,16 @@
 #import "SallyManagerDelegate.h"
 #import "SallyCommunicator.h"
 #import "TripBuilder.h"
+#import "LocationBuilder.h"
+#import "Trip.h"
 
 @interface SallyManager : NSObject
 
 extern NSString *SallyManagerErrors;
 
 enum {
-    SallyManagerErrorTripFetchCode
+    SallyManagerErrorTripFetchCode,
+    SallyManagerErrorLocationFetchCode
 };
 
 #pragma mark - Properties
@@ -25,11 +28,18 @@ enum {
 @property SallyCommunicator *communicator;
 @property User *user;
 @property TripBuilder *tripBuilder;
+@property LocationBuilder *locationBuilder;
 
 #pragma mark - Trip Methods
 
 - (void)fetchTrips;
 - (void)fetchingTripsFailedWithError:(NSError *)error;
 - (void)receivedTripsJSON:(NSString *)objectNotation;
+
+#pragma mark - Location Methods
+
+- (void)fetchLocationsForTrip:(Trip *)trip;
+- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error;
+- (void)receivedLocationsJSON:(NSString *)objectNotation forTrip:(Trip *)trip;
 
 @end
