@@ -61,6 +61,7 @@
 /* Begin PBXFileReference section */
 		075C483F84A3447B81D5AFC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		9E55BECDE87D43E98C7AE469 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicatorDelegate.h; sourceTree = "<group>"; };
 		B82817C018B0360B00D362F6 /* TripBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilderTests.m; sourceTree = "<group>"; };
 		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -273,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				B8F01A9D189F2681003A80A0 /* SallyManagerDelegate.h */,
+				B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";

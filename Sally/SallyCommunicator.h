@@ -7,14 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
 
 // Forward declarations
 @class Trip;
 @class User;
+@protocol SallyCommunicatorDelegate;
 
-@interface SallyCommunicator : NSObject
+@interface SallyCommunicator : AFHTTPSessionManager
+
+@property (nonatomic, weak) id<SallyCommunicatorDelegate>delegate;
+@property NSMutableDictionary *parameters;
+
++ (SallyCommunicator *)sharedSallyCommunicator;
 
 - (void)fetchTripsForUser:(User *)user;
 - (void)fetchLocationsForTrip:(Trip *)trip;
+
+- (void)signInWithEmail:(NSString *)email password:(NSString *)password;
 
 @end
