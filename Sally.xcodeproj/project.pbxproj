@@ -598,6 +598,7 @@
 		};
 		B859633C1888BEAE000588B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075C483F84A3447B81D5AFC3 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sally.app/Sally";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -620,6 +621,7 @@
 		};
 		B859633D1888BEAE000588B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075C483F84A3447B81D5AFC3 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sally.app/Sally";
 				FRAMEWORK_SEARCH_PATHS = (
