@@ -18,7 +18,7 @@
     wasAskedToFetchTrips = true;
 }
 
-- (void)fetchLocationsForTrip:(Trip *)trip
+- (void)fetchLocationsForTrip:(NSUInteger)tripID
 {
     wasAskedToFetchLocations = true;
 }

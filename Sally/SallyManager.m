@@ -71,9 +71,9 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     }
 }
 
-- (void)fetchLocationsForTrip:(Trip *)trip
+- (void)fetchLocationsForTrip:(NSUInteger)tripID
 {
-    [communicator fetchLocationsForTrip: trip];
+    [communicator fetchLocationsForTrip: tripID];
 }
 
 - (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error

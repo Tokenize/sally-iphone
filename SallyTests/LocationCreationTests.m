@@ -60,7 +60,7 @@
     
     manager.communicator = communicator;
     
-    [manager fetchLocationsForTrip: trip];
+    [manager fetchLocationsForTrip: trip.tripId];
     
     XCTAssertTrue(communicator.wasAskedToFetchLocations, @"Communicator was asked to fetch Trip locations");
     

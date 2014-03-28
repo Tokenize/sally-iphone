@@ -43,7 +43,7 @@ enum {
 
 #pragma mark - Location Methods
 
-- (void)fetchLocationsForTrip:(Trip *)trip;
+- (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error;
 - (void)receivedLocationsJSON:(NSString *)objectNotation forTrip:(Trip *)trip;
 

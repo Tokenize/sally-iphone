@@ -22,7 +22,7 @@
 + (SallyCommunicator *)sharedSallyCommunicator;
 
 - (void)fetchTrips;
-- (void)fetchLocationsForTrip:(Trip *)trip;
+- (void)fetchLocationsForTrip:(NSUInteger)tripID;
 
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;
 
