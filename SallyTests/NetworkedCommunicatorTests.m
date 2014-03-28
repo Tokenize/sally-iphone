@@ -33,7 +33,7 @@
     
     communicator.delegate = communicatorDelegate;
     
-    [Expecta setAsynchronousTestTimeout:2];
+    [Expecta setAsynchronousTestTimeout:5];
 }
 
 - (void)tearDown
