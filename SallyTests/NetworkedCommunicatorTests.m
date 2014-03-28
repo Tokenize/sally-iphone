@@ -51,6 +51,13 @@
     expect(communicatorDelegate.apiToken).will.equal(@"zYNjCaeguEaJk3HqVX9L");
 }
 
+- (void)testFailedSignInNotifiesDelegateOfError {
+    [communicator signInWithEmail: @"zaid@tokenize.ca" password: @"invalid"];
+
+    expect(communicatorDelegate.error).willNot.beNil;
+    expect(communicatorDelegate.apiToken).will.beNil;
+}
+
 - (void)testSuccessfulFetchTripsPassesTripsToDelegate
 {
     communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
