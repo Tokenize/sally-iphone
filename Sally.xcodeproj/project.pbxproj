@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45AAF38C88B4D749D1E7734 /* libPods-SallyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */; };
 		B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82817C018B0360B00D362F6 /* TripBuilderTests.m */; };
 		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
@@ -39,6 +40,8 @@
 		B8CD9F5F18AFFB8100FA801D /* TripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */; };
 		B8CD9F6018AFFB8100FA801D /* TripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */; };
 		B8CD9F6418AFFC3200FA801D /* FakeTripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F6318AFFC3200FA801D /* FakeTripBuilder.m */; };
+		B8D71A5618E2658300C3C084 /* NetworkedCommunicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5518E2658300C3C084 /* NetworkedCommunicatorTests.m */; };
+		B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */; };
 		B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
 		B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
 		B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
@@ -60,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		075C483F84A3447B81D5AFC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SallyTests.xcconfig"; path = "Pods/Pods-SallyTests.xcconfig"; sourceTree = "<group>"; };
 		9E55BECDE87D43E98C7AE469 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicatorDelegate.h; sourceTree = "<group>"; };
 		B82817C018B0360B00D362F6 /* TripBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilderTests.m; sourceTree = "<group>"; };
@@ -102,6 +106,9 @@
 		B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilder.m; sourceTree = "<group>"; };
 		B8CD9F6218AFFC3200FA801D /* FakeTripBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTripBuilder.h; sourceTree = "<group>"; };
 		B8CD9F6318AFFC3200FA801D /* FakeTripBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTripBuilder.m; sourceTree = "<group>"; };
+		B8D71A5518E2658300C3C084 /* NetworkedCommunicatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkedCommunicatorTests.m; sourceTree = "<group>"; };
+		B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicatorDelegate.h; sourceTree = "<group>"; };
+		B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicatorDelegate.m; sourceTree = "<group>"; };
 		B8E42CF0189F30C300305874 /* SallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicator.h; sourceTree = "<group>"; };
 		B8E42CF1189F30C300305874 /* SallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicator.m; sourceTree = "<group>"; };
 		B8F01A95189F2282003A80A0 /* SallyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManager.h; sourceTree = "<group>"; };
@@ -110,6 +117,7 @@
 		B8F01A9D189F2681003A80A0 /* SallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManagerDelegate.h; sourceTree = "<group>"; };
 		B8F01A9F189F2702003A80A0 /* MockSallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyManagerDelegate.h; sourceTree = "<group>"; };
 		B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyManagerDelegate.m; sourceTree = "<group>"; };
+		C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SallyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,7 @@
 				B85963291888BEAE000588B1 /* XCTest.framework in Frameworks */,
 				B859632B1888BEAE000588B1 /* UIKit.framework in Frameworks */,
 				B859632A1888BEAE000588B1 /* Foundation.framework in Frameworks */,
+				A45AAF38C88B4D749D1E7734 /* libPods-SallyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 				B85963081888BEAE000588B1 /* Frameworks */,
 				B85963071888BEAE000588B1 /* Products */,
 				075C483F84A3447B81D5AFC3 /* Pods.xcconfig */,
+				91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +198,7 @@
 				B859630D1888BEAE000588B1 /* UIKit.framework */,
 				B85963281888BEAE000588B1 /* XCTest.framework */,
 				9E55BECDE87D43E98C7AE469 /* libPods.a */,
+				C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +246,7 @@
 				B82817C018B0360B00D362F6 /* TripBuilderTests.m */,
 				B8C7E5A818B25F8F009FE36C /* LocationBuilderTests.m */,
 				B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */,
+				B8D71A5518E2658300C3C084 /* NetworkedCommunicatorTests.m */,
 			);
 			path = SallyTests;
 			sourceTree = "<group>";
@@ -286,6 +298,8 @@
 				B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */,
 				B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */,
 				B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */,
+				B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */,
+				B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -316,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B859633B1888BEAE000588B1 /* Build configuration list for PBXNativeTarget "SallyTests" */;
 			buildPhases = (
+				3B4E8E3F0E344AAD8002AED9 /* Check Pods Manifest.lock */,
 				B85963231888BEAE000588B1 /* Sources */,
 				B85963241888BEAE000588B1 /* Frameworks */,
 				B85963251888BEAE000588B1 /* Resources */,
+				F69316E73AD343CA85C1C40F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,6 +401,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B4E8E3F0E344AAD8002AED9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		5A116D7B219748B299C66A65 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -415,6 +446,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F69316E73AD343CA85C1C40F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SallyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -443,10 +489,12 @@
 				B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */,
 				B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */,
 				B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */,
+				B8D71A5618E2658300C3C084 /* NetworkedCommunicatorTests.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
 				B8C7E5A918B25F8F009FE36C /* LocationBuilderTests.m in Sources */,
 				B851F787189742A80099A787 /* TripTests.m in Sources */,
 				B8C7E5A418B25E9F009FE36C /* LocationBuilder.m in Sources */,
+				B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */,
 				B8C7E5A718B25EBE009FE36C /* FakeLocationBuilder.m in Sources */,
 				B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */,
 				B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */,
@@ -598,7 +646,7 @@
 		};
 		B859633C1888BEAE000588B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 075C483F84A3447B81D5AFC3 /* Pods.xcconfig */;
+			baseConfigurationReference = 91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sally.app/Sally";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -621,7 +669,7 @@
 		};
 		B859633D1888BEAE000588B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 075C483F84A3447B81D5AFC3 /* Pods.xcconfig */;
+			baseConfigurationReference = 91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sally.app/Sally";
 				FRAMEWORK_SEARCH_PATHS = (

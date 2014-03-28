@@ -20,7 +20,7 @@
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        _sharedSallyCommunicator = [[SallyCommunicator alloc] initWithBaseURL: [NSURL URLWithString: @"https://sally-api.tokenize.ca/api"]];
+        _sharedSallyCommunicator = [[SallyCommunicator alloc] initWithBaseURL: [NSURL URLWithString: @"http://sally-api.dev/api"]];
     });
     
     return _sharedSallyCommunicator;
