@@ -53,4 +53,13 @@
     temporaryParams = nil;
 }
 
+- (void)fetchTripsForUser:(User *)user {
+    [self GET: @"trips" parameters: self.parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didFetchTrips: responseObject];
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self fetchTripsFailedWithError: error];
+    }];
+}
+
 @end

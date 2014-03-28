@@ -20,4 +20,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips {
+    self.trips = trips;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

@@ -13,5 +13,6 @@
 
 @property NSError *error;
 @property NSString *apiToken;
+@property NSArray *trips;
 
 @end

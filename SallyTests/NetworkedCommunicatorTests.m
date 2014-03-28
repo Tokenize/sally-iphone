@@ -51,4 +51,20 @@
     expect(communicatorDelegate.apiToken).will.equal(@"zYNjCaeguEaJk3HqVX9L");
 }
 
+- (void)testSuccessfulFetchTripsPassesTripsToDelegate
+{
+    communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+    [communicator fetchTripsForUser: nil];
+
+    expect([communicatorDelegate.trips count]).will.beGreaterThan(0);
+}
+
+- (void)testFailedFetchTripsNotifiesDelegateOfError {
+    communicator.parameters[@"auth_token"] = @"invalid";
+    [communicator fetchTripsForUser: nil];
+
+    expect(communicatorDelegate.error).willNot.beNil;
+    expect([communicatorDelegate.trips count]).will.equal(0);
+}
+
 @end

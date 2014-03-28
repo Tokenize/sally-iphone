@@ -15,5 +15,7 @@
 
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didSignInWithToken:(NSString *)token;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator signInFailedWithError:(NSError *)error;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
 
 @end
