@@ -21,7 +21,7 @@
 
 + (SallyCommunicator *)sharedSallyCommunicator;
 
-- (void)fetchTripsForUser:(User *)user;
+- (void)fetchTrips;
 - (void)fetchLocationsForTrip:(Trip *)trip;
 
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;

@@ -13,7 +13,7 @@
 @synthesize wasAskedToFetchTrips;
 @synthesize wasAskedToFetchLocations;
 
-- (void)fetchTripsForUser:(User *)user
+- (void)fetchTrips
 {
     wasAskedToFetchTrips = true;
 }

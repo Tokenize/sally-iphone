@@ -37,7 +37,7 @@ NSString *SallyManagerErrors = @"SallyManagerError";
 
 - (void)fetchTrips
 {
-    [communicator fetchTripsForUser: user];
+    [communicator fetchTrips];
 }
 
 - (void)fetchingTripsFailedWithError:(NSError *)error

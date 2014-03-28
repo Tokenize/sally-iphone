@@ -61,14 +61,14 @@
 - (void)testSuccessfulFetchTripsPassesTripsToDelegate
 {
     communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
-    [communicator fetchTripsForUser: nil];
+    [communicator fetchTrips];
 
     expect([communicatorDelegate.trips count]).will.beGreaterThan(0);
 }
 
 - (void)testFailedFetchTripsNotifiesDelegateOfError {
     communicator.parameters[@"auth_token"] = @"invalid";
-    [communicator fetchTripsForUser: nil];
+    [communicator fetchTrips];
 
     expect(communicatorDelegate.error).willNot.beNil;
     expect([communicatorDelegate.trips count]).will.equal(0);
