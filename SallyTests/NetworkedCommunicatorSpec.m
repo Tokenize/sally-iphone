@@ -76,6 +76,27 @@ describe(@"NetworkedCommunicator", ^{
             });
         });
     });
+
+    describe(@"Fetch Locations for a Trip",  ^{
+        context(@"success", ^{
+            it(@"should pass the locations to the delegate", ^{
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator fetchLocationsForTrip: 1];
+
+                expect([communicatorDelegate.locations count]).will.beGreaterThan(0);
+            });
+        });
+
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator fetchLocationsForTrip: 0];
+
+                expect(communicatorDelegate.error).willNot.beNil;
+                expect([communicatorDelegate.locations count]).will.equal(0);
+            });
+        });
+    });
 });
 
 SpecEnd

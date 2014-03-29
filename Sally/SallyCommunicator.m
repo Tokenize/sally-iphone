@@ -62,4 +62,15 @@
     }];
 }
 
+- (void)fetchLocationsForTrip:(NSUInteger)tripID {
+    NSString  *locationsUrl = [NSString stringWithFormat: @"trips/%lu/locations", (unsigned long)tripID];
+
+    [self GET: locationsUrl parameters: parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didFetchLocationsForTrip: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self fetchLocationsForTripFailedWithError: error];
+    }];
+}
+
 @end
