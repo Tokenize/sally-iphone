@@ -23,6 +23,7 @@
 
 - (void)fetchTrips;
 - (void)fetchLocationsForTrip:(NSUInteger)tripID;
+- (void)createTrip:(NSDictionary *)tripAttributes;
 
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;
 

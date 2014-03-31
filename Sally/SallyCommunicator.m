@@ -30,7 +30,6 @@
     self = [super initWithBaseURL: url];
     
     if (self) {
-        self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions: NSJSONReadingAllowFragments];
         self.parameters = [[NSMutableDictionary alloc] init];
     }
@@ -71,6 +70,21 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.delegate sallyCommunicator: self fetchLocationsForTripFailedWithError: error];
     }];
+}
+
+- (void)createTrip:(NSDictionary *)tripAttributes {
+    NSMutableDictionary *temporaryParams = [[NSMutableDictionary alloc] initWithDictionary: tripAttributes];
+    [temporaryParams addEntriesFromDictionary: self.parameters];
+    
+    [self POST: @"trips" parameters: temporaryParams success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didCreateTrip: responseObject];
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self createTripFailedWithError: error];
+        
+    }];
+    
+    temporaryParams = nil;
 }
 
 @end

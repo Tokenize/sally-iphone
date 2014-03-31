@@ -19,5 +19,7 @@
 - (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchLocationsForTrip:(NSArray *)locations;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator fetchLocationsForTripFailedWithError:(NSError *)error;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)trip;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error;
 
 @end

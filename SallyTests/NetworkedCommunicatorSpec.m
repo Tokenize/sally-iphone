@@ -97,6 +97,30 @@ describe(@"NetworkedCommunicator", ^{
             });
         });
     });
+    
+    describe(@"Create trip", ^{
+        context(@"success", ^{
+            it(@"should pass the newly created trip to the delegate", ^{
+                NSDictionary *tripAttributes = @{@"name": @"Test 1", @"start_at": [[NSDate distantFuture] description]};
+                
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator createTrip: tripAttributes];
+                
+                expect(communicatorDelegate.trip).willNot.beNil;
+                expect(communicatorDelegate.trip[@"name"]).will.equal(@"Test 1");
+            });
+        });
+        
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator createTrip: @{@"random": @"key"}];
+
+                expect(communicatorDelegate.error).willNot.beNil;
+                expect(communicatorDelegate.trip).will.beNil;
+            });
+        });
+    });
 });
 
 SpecEnd

@@ -36,4 +36,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)trip {
+    self.trip = trip;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

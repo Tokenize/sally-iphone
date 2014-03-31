@@ -15,5 +15,6 @@
 @property NSString *apiToken;
 @property NSArray *trips;
 @property NSArray *locations;
+@property NSDictionary *trip;
 
 @end
