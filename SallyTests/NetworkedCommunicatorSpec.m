@@ -121,6 +121,32 @@ describe(@"NetworkedCommunicator", ^{
             });
         });
     });
+
+    describe(@"Create location", ^{
+        context(@"success", ^{
+            it(@"should pass the newly created location to the delegate", ^{
+                NSDictionary *locationAttributes = @{@"trip_id": @"1", @"time": [[NSDate distantFuture] description], @"latitude": @"123456789", @"longitude": @"987654321"};
+
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator createLocationForTrip: locationAttributes];
+
+                expect(communicatorDelegate.location).willNot.beNil;
+                expect(communicatorDelegate.error).will.beNil;
+            });
+        });
+
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                NSDictionary *locationAttributes = @{@"trip_id": @"1", @"latitude": @"123456789", @"longitude": @"987654321"};
+
+                communicator.parameters[@"auth_token"] = @"zYNjCaeguEaJk3HqVX9L";
+                [communicator createLocationForTrip: locationAttributes];
+
+                expect(communicatorDelegate.error).willNot.beNil;
+                expect(communicatorDelegate.location).will.beNil;
+            });
+        });
+    });
 });
 
 SpecEnd

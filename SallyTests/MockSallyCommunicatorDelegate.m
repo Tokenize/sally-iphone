@@ -44,4 +44,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateLocation:(NSDictionary *)location {
+    self.location = location;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createLocationFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

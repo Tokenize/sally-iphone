@@ -16,5 +16,6 @@
 @property NSArray *trips;
 @property NSArray *locations;
 @property NSDictionary *trip;
+@property NSDictionary *location;
 
 @end

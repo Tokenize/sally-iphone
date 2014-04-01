@@ -87,4 +87,20 @@
     temporaryParams = nil;
 }
 
+- (void)createLocationForTrip:(NSDictionary *)locationAttributes {
+    NSString  *locationsUrl = [NSString stringWithFormat: @"trips/%@/locations", locationAttributes[@"trip_id"]];
+
+    NSMutableDictionary *temporaryParams = [[NSMutableDictionary alloc] initWithDictionary: locationAttributes];
+    [temporaryParams addEntriesFromDictionary: self.parameters];
+
+    [self POST: locationsUrl parameters: temporaryParams success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didCreateLocation: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self createLocationFailedWithError: error];
+    }];
+
+    temporaryParams = nil;
+}
+
 @end
