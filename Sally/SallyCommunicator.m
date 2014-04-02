@@ -30,6 +30,7 @@
     self = [super initWithBaseURL: url];
     
     if (self) {
+        self.requestSerializer = [AFJSONRequestSerializer serializer];
         self.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions: NSJSONReadingAllowFragments];
         self.parameters = [[NSMutableDictionary alloc] init];
     }
