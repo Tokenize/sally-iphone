@@ -12,6 +12,7 @@
 #import "Specta.h"
 #define EXP_SHORTHAND
 #import "Expecta.h"
+#import "Nocilla.h"
 
 SpecBegin(NetworkedCommunicator)
 
@@ -22,6 +23,7 @@ describe(@"NetworkedCommunicator", ^{
     
     beforeAll(^{
         [Expecta setAsynchronousTestTimeout: 5];
+        [[LSNocilla sharedInstance] start];
     });
     
     beforeEach(^{
@@ -34,14 +36,26 @@ describe(@"NetworkedCommunicator", ^{
     afterEach(^{
         communicator = nil;
         communicatorDelegate = nil;
+
+        [[LSNocilla sharedInstance] clearStubs];
     });
-    
+
+    afterAll(^{
+        [[LSNocilla sharedInstance] stop];
+    });
+
     describe(@"Sign-in", ^{
         context(@"success", ^{
-            it(@"should pass the token to the delegate", ^{
-                [communicator signInWithEmail: @"zaid@tokenize.ca" password: @"xuXv3ZQXoKM3kALV"];
-                
-                expect(communicatorDelegate.apiToken).will.equal(@"zYNjCaeguEaJk3HqVX9L");
+            fit(@"should pass the token to the delegate", ^{
+                stubRequest(@"GET", @"http://sally-api.dev/api/users/sign_in").
+                withHeader(@"Accept", @"application/json").
+                withBody(@"{\"email\":\"zaid@tokenize.ca\", \"password\":\"secret\"}").
+                andReturn(200).
+                withBody(@"api_token");
+
+                [communicator signInWithEmail: @"zaid@tokenize.ca" password: @"secret"];
+
+                expect(communicatorDelegate.apiToken).will.equal(@"api_token");
             });
         });
         

@@ -4,4 +4,5 @@ pod "AFNetworking", "~> 2.0"
 target :SallyTests do
   pod 'Expecta'
   pod 'Specta'
+  pod 'Nocilla'
 end
