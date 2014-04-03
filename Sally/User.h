@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
-@interface User : NSObject
+@interface User : MTLModel <MTLJSONSerializing>
 
 @property (readonly) NSString *firstName;
 @property (readonly) NSString *lastName;
 @property (readonly) NSString *email;
-
-- (id)initWithFirstName:(NSString *)aFirstName lastName:(NSString *)aLastName email:(NSString *)email;
 
 @end

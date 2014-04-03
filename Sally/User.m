@@ -10,18 +10,11 @@
 
 @implementation User
 
-@synthesize firstName;
-@synthesize lastName;
-@synthesize email;
-
-- (id)initWithFirstName:(NSString *)aFirstName lastName:(NSString *)aLastName email:(NSString *)anEmail
-{
-    if (self = [super init]) {
-        firstName = [aFirstName copy];
-        lastName = [aLastName copy];;
-        email = [anEmail copy];
-    }
-    return self;
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"firstName": @"first_name",
+             @"lastName": @"last_name",
+    };
 }
 
 @end

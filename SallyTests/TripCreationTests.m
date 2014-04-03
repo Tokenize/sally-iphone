@@ -73,7 +73,7 @@
 - (void)testAskingForTripsMeansRequestingData
 {
     MockSallyCommunicator *communicator = [[MockSallyCommunicator alloc] init];
-    User *user = [[User alloc] initWithFirstName: @"John" lastName: @"Doe" email: @"jdoe@tokenize.ca"];
+    User *user = [[User alloc] initWithDictionary:@{@"firstName": @"John", @"lastName": @"Doe", @"email": @"jdoe@tokenize.ca"} error: nil];
     
     manager.user = user;
     manager.communicator = communicator;

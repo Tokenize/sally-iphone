@@ -20,7 +20,7 @@
 - (void)setUp
 {
     [super setUp];
-    user = [[User alloc] initWithFirstName: @"Joe" lastName: @"Tester" email: @"joe@example.ca"];
+    user = [[User alloc] initWithDictionary: @{@"firstName": @"Joe", @"lastName": @"Tester", @"email": @"joe@example.ca"} error: nil];
 }
 
 - (void)tearDown
