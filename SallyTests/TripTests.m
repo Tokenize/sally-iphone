@@ -21,9 +21,8 @@
 - (void)setUp
 {
     [super setUp];
-    trip = [[Trip alloc] initWithName: @"Morning walk" description: @"A short morning walk"
-                              startAt:[NSDate distantPast] endDate:[NSDate distantFuture]];
-    
+    trip = [[Trip alloc] initWithDictionary: @{@"name": @"Morning walk", @"description": @"A short morning walk",
+                                               @"startAt": [[NSDate distantPast] description], @"endAt": [[NSDate distantFuture] description]} error: nil];
 }
 
 - (void)tearDown
@@ -56,49 +55,49 @@
 
 - (void)testThatTripHasCorrectStartAt
 {
-    XCTAssertEqualObjects(trip.startAt, [NSDate distantPast], @"Trip should have the correct startAt");
+    XCTAssertEqualObjects([trip.startAt description], [[NSDate distantPast] description], @"Trip should have the correct startAt");
 }
 
 - (void)testThatTripHasCorrectEndAt
 {
-    XCTAssertEqualObjects(trip.endAt, [NSDate distantFuture], @"Trip should have the correct endAt");
+    XCTAssertEqualObjects([trip.endAt description], [[NSDate distantFuture] description], @"Trip should have the correct endAt");
 }
 
-- (void)testThatTripCannotBeCreatedWithNilName
+- (void)testThatTripIsInvalidWithNilName
 {
-    Trip *newTrip = [[Trip alloc] initWithName: nil description: nil startAt:[NSDate distantPast] endDate: nil];
-    
-    XCTAssertNil(newTrip, @"Trip requires a non-nil name");
+    Trip *newTrip = [[Trip alloc] initWithDictionary: @{@"startAt": [[NSDate distantPast] description]} error: nil];
+
+    XCTAssertFalse([newTrip validate: nil], @"Trip requires a non-nil name");
 }
 
-- (void)testThatTripCannotBeCreatedWithNilStartAt
+- (void)testThatTripIsInvalidWithNilStartAt
 {
-    Trip *newTrip = [[Trip alloc] initWithName: @"Some trip" description: nil startAt: nil endDate: nil];
-    
-    XCTAssertNil(newTrip, @"Trip requires a non-nil startAt");
+    Trip *newTrip = [[Trip alloc] initWithDictionary: @{@"name": @"Some trip"} error: nil];
+
+    XCTAssertFalse([newTrip validate: nil], @"Trip requires a non-nil startAt");
 }
 
-- (void)testThatTripCanBeCreatedWithoutDescription
+- (void)testThatTripIsValidWithoutDescription
 {
-    Trip *newTrip = [[Trip alloc] initWithName:@"Test" description:nil startAt:[NSDate distantPast] endDate:[NSDate distantFuture]];
+    Trip *newTrip = [[Trip alloc] initWithDictionary: @{@"name": @"Test", @"startAt": [[NSDate distantPast] description], @"endAt": [[NSDate distantFuture] description]} error: nil];
     
-    XCTAssertNotNil(newTrip, @"Trip without a description should be valid");
+    XCTAssertTrue([newTrip validate: nil], @"Trip without a description should be valid");
     XCTAssertEqualObjects(newTrip.name, @"Test", @"Trip should have the correct name");
     XCTAssertEqualObjects(newTrip.description, nil, @"Trip should have a nil description");
-    XCTAssertEqualObjects(newTrip.startAt, [NSDate distantPast], @"Trip should have the correct startAt");
-    XCTAssertEqualObjects(newTrip.endAt, [NSDate distantFuture], @"Trip should have the correct endAt");
+    XCTAssertEqualObjects([newTrip.startAt description], [[NSDate distantPast] description], @"Trip should have the correct startAt");
+    XCTAssertEqualObjects([newTrip.endAt description], [[NSDate distantFuture] description], @"Trip should have the correct endAt");
     
     newTrip = nil;
 }
 
-- (void)testThatTripCanBeCreatedWithoutEndAt
+- (void)testThatTripIsValidWithoutEndAt
 {
-    Trip *newTrip = [[Trip alloc] initWithName:@"Test" description: nil startAt:[NSDate distantPast] endDate: nil];
+    Trip *newTrip = [[Trip alloc] initWithDictionary: @{@"name": @"Test", @"startAt": [[NSDate distantPast] description]} error: nil];
     
-    XCTAssertNotNil(newTrip, @"Trip without a description should be valid");
+    XCTAssertTrue([newTrip validate: nil], @"Trip without a description should be valid");
     XCTAssertEqualObjects(newTrip.name, @"Test", @"Trip should have the correct name");
     XCTAssertEqualObjects(newTrip.description, nil, @"Trip should have a nil description");
-    XCTAssertEqualObjects(newTrip.startAt, [NSDate distantPast], @"Trip should have the correct startAt");
+    XCTAssertEqualObjects([newTrip.startAt description], [[NSDate distantPast] description], @"Trip should have the correct startAt");
     XCTAssertEqualObjects(newTrip.endAt, nil, @"Trip should have a nil endAt");
     
     newTrip = nil;

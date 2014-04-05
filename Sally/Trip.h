@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
 // Forward Declarations
 @class Location;
 
-@interface Trip : NSObject
+@interface Trip : MTLModel <MTLJSONSerializing>
+
+extern NSString * const TripErrorDomain;
+
+enum {
+    TripErrorMissingName,
+    TripErrorMissingStartAt,
+};
 
 @property NSUInteger tripId;
 @property (readonly) NSString *name;
