@@ -38,7 +38,7 @@
 		B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
 		B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
 		B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
-		B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A99189F23BC003A80A0 /* TripCreationTests.m */; };
+		B8F01A9A189F23BC003A80A0 /* TripWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */; };
 		B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */; };
 		C54CC3ECBC1647B68B94CDB1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E55BECDE87D43E98C7AE469 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -95,7 +95,7 @@
 		B8E42CF1189F30C300305874 /* SallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicator.m; sourceTree = "<group>"; };
 		B8F01A95189F2282003A80A0 /* SallyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManager.h; sourceTree = "<group>"; };
 		B8F01A96189F2282003A80A0 /* SallyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyManager.m; sourceTree = "<group>"; };
-		B8F01A99189F23BC003A80A0 /* TripCreationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripCreationTests.m; sourceTree = "<group>"; };
+		B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripWorkflowSpec.m; sourceTree = "<group>"; };
 		B8F01A9D189F2681003A80A0 /* SallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManagerDelegate.h; sourceTree = "<group>"; };
 		B8F01A9F189F2702003A80A0 /* MockSallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyManagerDelegate.h; sourceTree = "<group>"; };
 		B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyManagerDelegate.m; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 				B8F01A9C189F25D9003A80A0 /* Mocks */,
 				B851F77F189732630099A787 /* Models */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
-				B8F01A99189F23BC003A80A0 /* TripCreationTests.m */,
+				B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */,
 				B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */,
 				B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */,
 			);
@@ -447,7 +447,7 @@
 				B851F787189742A80099A787 /* TripSpec.m in Sources */,
 				B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */,
 				B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */,
-				B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */,
+				B8F01A9A189F23BC003A80A0 /* TripWorkflowSpec.m in Sources */,
 				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
