@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
-@interface Location : NSObject
+@interface Location : MTLModel <MTLJSONSerializing>
 
 @property NSUInteger locationId;
 @property NSDate *time;

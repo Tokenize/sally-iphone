@@ -30,7 +30,7 @@
 		B85963331888BEAE000588B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85963311888BEAE000588B1 /* InfoPlist.strings */; };
 		B88ADB5118989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5218989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
-		B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationTests.m */; };
+		B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationSpec.m */; };
 		B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */; };
 		B8C7E5A318B25E9F009FE36C /* LocationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5A218B25E9F009FE36C /* LocationBuilder.m */; };
 		B8C7E5A418B25E9F009FE36C /* LocationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5A218B25E9F009FE36C /* LocationBuilder.m */; };
@@ -93,7 +93,7 @@
 		B85963321888BEAE000588B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B88ADB4F18989A2800E4BD4A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		B88ADB5018989A2800E4BD4A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		B88ADB5318989F1E00E4BD4A /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		B88ADB5318989F1E00E4BD4A /* LocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSpec.m; sourceTree = "<group>"; };
 		B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicator.h; sourceTree = "<group>"; };
 		B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicator.m; sourceTree = "<group>"; };
 		B8C7E5A118B25E9F009FE36C /* LocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationBuilder.h; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			children = (
 				B851F7801897327E0099A787 /* UserSpec.m */,
 				B851F786189742A80099A787 /* TripSpec.m */,
-				B88ADB5318989F1E00E4BD4A /* LocationTests.m */,
+				B88ADB5318989F1E00E4BD4A /* LocationSpec.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 				B8C7E5A418B25E9F009FE36C /* LocationBuilder.m in Sources */,
 				B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */,
 				B8C7E5A718B25EBE009FE36C /* FakeLocationBuilder.m in Sources */,
-				B88ADB5418989F1E00E4BD4A /* LocationTests.m in Sources */,
+				B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */,
 				B8F01A9A189F23BC003A80A0 /* TripCreationTests.m in Sources */,
 				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,

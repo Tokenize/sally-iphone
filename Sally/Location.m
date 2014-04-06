@@ -17,4 +17,8 @@
 @synthesize longitude;
 @synthesize speed;
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{@"locationId": @"id"};
+}
+
 @end
