@@ -31,7 +31,7 @@
 		B88ADB5218989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
 		B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationSpec.m */; };
 		B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */; };
-		B8C7E5AB18B2735F009FE36C /* LocationCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */; };
+		B8C7E5AB18B2735F009FE36C /* LocationWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */; };
 		B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */; };
 		B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */; };
 		B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
@@ -87,7 +87,7 @@
 		B88ADB5318989F1E00E4BD4A /* LocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSpec.m; sourceTree = "<group>"; };
 		B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicator.h; sourceTree = "<group>"; };
 		B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicator.m; sourceTree = "<group>"; };
-		B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCreationTests.m; sourceTree = "<group>"; };
+		B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationWorkflowSpec.m; sourceTree = "<group>"; };
 		B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicatorSpec.m; sourceTree = "<group>"; };
 		B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicatorDelegate.h; sourceTree = "<group>"; };
 		B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicatorDelegate.m; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 				B851F77F189732630099A787 /* Models */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
 				B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */,
-				B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */,
+				B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */,
 				B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */,
 			);
 			path = SallyTests;
@@ -451,7 +451,7 @@
 				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
-				B8C7E5AB18B2735F009FE36C /* LocationCreationTests.m in Sources */,
+				B8C7E5AB18B2735F009FE36C /* LocationWorkflowSpec.m in Sources */,
 				B851F7811897327E0099A787 /* UserSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
