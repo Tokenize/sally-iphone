@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A45AAF38C88B4D749D1E7734 /* libPods-SallyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */; };
-		B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82817C018B0360B00D362F6 /* TripBuilderTests.m */; };
 		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F7811897327E0099A787 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserSpec.m */; };
@@ -37,9 +36,6 @@
 		B8C7E5A718B25EBE009FE36C /* FakeLocationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5A618B25EBE009FE36C /* FakeLocationBuilder.m */; };
 		B8C7E5A918B25F8F009FE36C /* LocationBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5A818B25F8F009FE36C /* LocationBuilderTests.m */; };
 		B8C7E5AB18B2735F009FE36C /* LocationCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */; };
-		B8CD9F5F18AFFB8100FA801D /* TripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */; };
-		B8CD9F6018AFFB8100FA801D /* TripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */; };
-		B8CD9F6418AFFC3200FA801D /* FakeTripBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CD9F6318AFFC3200FA801D /* FakeTripBuilder.m */; };
 		B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */; };
 		B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */; };
 		B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
@@ -66,7 +62,6 @@
 		91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SallyTests.xcconfig"; path = "Pods/Pods-SallyTests.xcconfig"; sourceTree = "<group>"; };
 		9E55BECDE87D43E98C7AE469 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicatorDelegate.h; sourceTree = "<group>"; };
-		B82817C018B0360B00D362F6 /* TripBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilderTests.m; sourceTree = "<group>"; };
 		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B851F7801897327E0099A787 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
@@ -102,10 +97,6 @@
 		B8C7E5A618B25EBE009FE36C /* FakeLocationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeLocationBuilder.m; sourceTree = "<group>"; };
 		B8C7E5A818B25F8F009FE36C /* LocationBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationBuilderTests.m; sourceTree = "<group>"; };
 		B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCreationTests.m; sourceTree = "<group>"; };
-		B8CD9F5D18AFFB8100FA801D /* TripBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripBuilder.h; sourceTree = "<group>"; };
-		B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilder.m; sourceTree = "<group>"; };
-		B8CD9F6218AFFC3200FA801D /* FakeTripBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeTripBuilder.h; sourceTree = "<group>"; };
-		B8CD9F6318AFFC3200FA801D /* FakeTripBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeTripBuilder.m; sourceTree = "<group>"; };
 		B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicatorSpec.m; sourceTree = "<group>"; };
 		B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicatorDelegate.h; sourceTree = "<group>"; };
 		B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicatorDelegate.m; sourceTree = "<group>"; };
@@ -243,7 +234,6 @@
 				B851F77F189732630099A787 /* Models */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
 				B8F01A99189F23BC003A80A0 /* TripCreationTests.m */,
-				B82817C018B0360B00D362F6 /* TripBuilderTests.m */,
 				B8C7E5A818B25F8F009FE36C /* LocationBuilderTests.m */,
 				B8C7E5AA18B2735F009FE36C /* LocationCreationTests.m */,
 				B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */,
@@ -263,8 +253,6 @@
 		B8CD9F5C18AFFB6400FA801D /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				B8CD9F5D18AFFB8100FA801D /* TripBuilder.h */,
-				B8CD9F5E18AFFB8100FA801D /* TripBuilder.m */,
 				B8C7E5A118B25E9F009FE36C /* LocationBuilder.h */,
 				B8C7E5A218B25E9F009FE36C /* LocationBuilder.m */,
 			);
@@ -274,8 +262,6 @@
 		B8CD9F6118AFFC1000FA801D /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				B8CD9F6218AFFC3200FA801D /* FakeTripBuilder.h */,
-				B8CD9F6318AFFC3200FA801D /* FakeTripBuilder.m */,
 				B8C7E5A518B25EBE009FE36C /* FakeLocationBuilder.h */,
 				B8C7E5A618B25EBE009FE36C /* FakeLocationBuilder.m */,
 			);
@@ -472,7 +458,6 @@
 				B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */,
 				B851F77D189732560099A787 /* User.m in Sources */,
 				B85963201888BEAE000588B1 /* ViewController.m in Sources */,
-				B8CD9F5F18AFFB8100FA801D /* TripBuilder.m in Sources */,
 				B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8C7E5A318B25E9F009FE36C /* LocationBuilder.m in Sources */,
 				B859631A1888BEAE000588B1 /* AppDelegate.m in Sources */,
@@ -487,7 +472,6 @@
 			files = (
 				B851F785189741A60099A787 /* Trip.m in Sources */,
 				B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */,
-				B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */,
 				B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */,
 				B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
@@ -501,10 +485,8 @@
 				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
-				B8CD9F6018AFFB8100FA801D /* TripBuilder.m in Sources */,
 				B8C7E5AB18B2735F009FE36C /* LocationCreationTests.m in Sources */,
 				B851F7811897327E0099A787 /* UserSpec.m in Sources */,
-				B8CD9F6418AFFC3200FA801D /* FakeTripBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

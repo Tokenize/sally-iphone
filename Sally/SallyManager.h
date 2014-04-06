@@ -52,7 +52,6 @@ enum {
 
 - (void)fetchTrips;
 - (void)fetchingTripsFailedWithError:(NSError *)error;
-- (void)receivedTripsJSON:(NSString *)objectNotation;
 
 #pragma mark - Location Methods
 

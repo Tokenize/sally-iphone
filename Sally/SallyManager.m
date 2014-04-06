@@ -22,7 +22,6 @@
 #import "SallyManager.h"
 #import "SallyManagerDelegate.h"
 #import "SallyCommunicator.h"
-#import "TripBuilder.h"
 #import "LocationBuilder.h"
 #import "Trip.h"
 #import "User.h"
@@ -32,7 +31,6 @@
 @synthesize delegate;
 @synthesize communicator;
 @synthesize user;
-@synthesize tripBuilder;
 @synthesize locationBuilder;
 
 NSString *SallyManagerErrors = @"SallyManagerError";
@@ -59,29 +57,6 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorTripFetchCode userInfo: errorInfo];
     
     [delegate fetchingTripsFailedWithError: reportableError];
-}
-
-- (void)receivedTripsJSON:(NSString *)objectNotation
-{
-    NSError *error = nil;
-    NSArray *trips = [tripBuilder tripsFromJSON: objectNotation error: &error];
-    
-    if (!trips) {
-        NSDictionary *errorInfo = nil;
-        
-        if (error) {
-            errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
-        }
-        
-        NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors
-                                                       code: SallyManagerErrorTripFetchCode
-                                                   userInfo: errorInfo];
-        
-        [delegate fetchingTripsFailedWithError: reportableError];
-    }
-    else {
-        [delegate didReceivedTrips: trips];
-    }
 }
 
 - (void)fetchLocationsForTrip:(NSUInteger)tripID
