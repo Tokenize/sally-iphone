@@ -23,8 +23,6 @@
 #import "AFHTTPSessionManager.h"
 
 // Forward declarations
-@class Trip;
-@class User;
 @protocol SallyCommunicatorDelegate;
 
 @interface SallyCommunicator : AFHTTPSessionManager
