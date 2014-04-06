@@ -11,10 +11,10 @@
 		B82817C118B0360B00D362F6 /* TripBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B82817C018B0360B00D362F6 /* TripBuilderTests.m */; };
 		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
-		B851F7811897327E0099A787 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserTests.m */; };
+		B851F7811897327E0099A787 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserSpec.m */; };
 		B851F784189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
 		B851F785189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
-		B851F787189742A80099A787 /* TripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F786189742A80099A787 /* TripTests.m */; };
+		B851F787189742A80099A787 /* TripSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F786189742A80099A787 /* TripSpec.m */; };
 		B859630A1888BEAE000588B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85963091888BEAE000588B1 /* Foundation.framework */; };
 		B859630C1888BEAE000588B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630B1888BEAE000588B1 /* CoreGraphics.framework */; };
 		B859630E1888BEAE000588B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630D1888BEAE000588B1 /* UIKit.framework */; };
@@ -69,10 +69,10 @@
 		B82817C018B0360B00D362F6 /* TripBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripBuilderTests.m; sourceTree = "<group>"; };
 		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		B851F7801897327E0099A787 /* UserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		B851F7801897327E0099A787 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
 		B851F782189741A60099A787 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
 		B851F783189741A60099A787 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
-		B851F786189742A80099A787 /* TripTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTests.m; sourceTree = "<group>"; };
+		B851F786189742A80099A787 /* TripSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripSpec.m; sourceTree = "<group>"; };
 		B85963061888BEAE000588B1 /* Sally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85963091888BEAE000588B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B859630B1888BEAE000588B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,8 +162,8 @@
 		B851F77F189732630099A787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B851F7801897327E0099A787 /* UserTests.m */,
-				B851F786189742A80099A787 /* TripTests.m */,
+				B851F7801897327E0099A787 /* UserSpec.m */,
+				B851F786189742A80099A787 /* TripSpec.m */,
 				B88ADB5318989F1E00E4BD4A /* LocationTests.m */,
 			);
 			name = Models;
@@ -492,7 +492,7 @@
 				B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */,
 				B851F77E189732560099A787 /* User.m in Sources */,
 				B8C7E5A918B25F8F009FE36C /* LocationBuilderTests.m in Sources */,
-				B851F787189742A80099A787 /* TripTests.m in Sources */,
+				B851F787189742A80099A787 /* TripSpec.m in Sources */,
 				B8C7E5A418B25E9F009FE36C /* LocationBuilder.m in Sources */,
 				B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */,
 				B8C7E5A718B25EBE009FE36C /* FakeLocationBuilder.m in Sources */,
@@ -503,7 +503,7 @@
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
 				B8CD9F6018AFFB8100FA801D /* TripBuilder.m in Sources */,
 				B8C7E5AB18B2735F009FE36C /* LocationCreationTests.m in Sources */,
-				B851F7811897327E0099A787 /* UserTests.m in Sources */,
+				B851F7811897327E0099A787 /* UserSpec.m in Sources */,
 				B8CD9F6418AFFC3200FA801D /* FakeTripBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
