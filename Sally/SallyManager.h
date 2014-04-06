@@ -27,7 +27,6 @@
 // Forward Declarations (Classes)
 @class SallyCommunicator;
 @class Trip;
-@class TripBuilder;
 @class User;
 
 @interface SallyManager : NSObject
