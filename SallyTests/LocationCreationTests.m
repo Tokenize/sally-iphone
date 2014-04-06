@@ -10,7 +10,6 @@
 #import "SallyManager.h"
 #import "MockSallyManagerDelegate.h"
 #import "MockSallyCommunicator.h"
-#import "FakeLocationBuilder.h"
 #import "Location.h"
 #import "Trip.h"
 
@@ -89,82 +88,6 @@
                           @"The underlying error should be available in userInfo");
     
     communicatorError = nil;
-}
-
-- (void)testLocationJSONIsPassedToLocationBuilder
-{
-    FakeLocationBuilder *builder = [[FakeLocationBuilder alloc] init];
-    
-    manager.locationBuilder = builder;
-    [manager receivedLocationsJSON: @"Fake JSON" forTrip: trip];
-    
-    XCTAssertEqualObjects(builder.JSON, @"Fake JSON", @"Downloaded JSON should be passed ot the builder");
-    
-    manager.locationBuilder = nil;
-    builder = nil;
-}
-
-- (void)testDelegateNotifiedOfErrorWhenLocationBuilderFails
-{
-    FakeLocationBuilder *builder = [[FakeLocationBuilder alloc] init];
-    
-    builder.arrayToReturn = nil;
-    builder.errorToSet = underlyingError;
-    manager.locationBuilder = builder;
-    
-    [manager receivedLocationsJSON: @"Fake JSON" forTrip: trip];
-    
-    XCTAssertNotNil([[delegate fetchError] userInfo], @"The delegate should be notified of the error");
-    
-    manager.locationBuilder = nil;
-    builder = nil;
-}
-
-- (void)testDelegateNotNotifiedOfErrorWhenLocationReceived
-{
-    FakeLocationBuilder *builder = [[FakeLocationBuilder alloc] init];
-    
-    manager.locationBuilder = builder;
-    builder.arrayToReturn = locationsArray;
-    
-    [manager receivedLocationsJSON: @"Fake JSON" forTrip: trip];
-    
-    XCTAssertNil([delegate fetchError], @"No error should be set on success");
-    
-    
-    manager.locationBuilder = nil;
-    builder = nil;
-}
-
-- (void)testDelegateReceivesTheLocationsDiscoveredByManager
-{
-    FakeLocationBuilder *builder = [[FakeLocationBuilder alloc] init];
-    
-    manager.locationBuilder = builder;
-    builder.arrayToReturn = locationsArray;
-    
-    [manager receivedLocationsJSON: @"Fake JSON" forTrip: trip];
-    
-    XCTAssertEqualObjects([delegate receivedLocations], locationsArray, @"The manager should send the locations to the delegate");
-    
-    manager.locationBuilder = nil;
-    builder = nil;
-    
-}
-
-- (void)testEmptyArrayIsPassedToDelegate
-{
-    FakeLocationBuilder *builder = [[FakeLocationBuilder alloc] init];
-    
-    manager.locationBuilder = builder;
-    builder.arrayToReturn = [NSArray array];;
-    
-    [manager receivedLocationsJSON: @"Fake JSON" forTrip: trip];
-    
-    XCTAssertEqualObjects([delegate receivedLocations], [NSArray array], @"Returning an empty Location array is not an error");
-    
-    manager.locationBuilder = nil;
-    builder = nil;
 }
 
 @end

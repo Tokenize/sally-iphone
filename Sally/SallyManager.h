@@ -25,7 +25,6 @@
 @protocol SallyManagerDelegate;
 
 // Forward Declarations (Classes)
-@class LocationBuilder;
 @class SallyCommunicator;
 @class Trip;
 @class TripBuilder;
@@ -45,8 +44,6 @@ enum {
 @property (weak, nonatomic) id<SallyManagerDelegate> delegate;
 @property SallyCommunicator *communicator;
 @property User *user;
-@property TripBuilder *tripBuilder;
-@property LocationBuilder *locationBuilder;
 
 #pragma mark - Trip Methods
 
@@ -57,6 +54,5 @@ enum {
 
 - (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error;
-- (void)receivedLocationsJSON:(NSString *)objectNotation forTrip:(Trip *)trip;
 
 @end
