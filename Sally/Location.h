@@ -24,11 +24,11 @@
 
 @interface Location : MTLModel <MTLJSONSerializing>
 
-@property NSUInteger locationId;
-@property NSDate *time;
-@property NSString *direction;
-@property NSNumber *latitude;
-@property NSNumber *longitude;
-@property NSInteger speed;
+@property (nonatomic) NSUInteger locationId;
+@property (nonatomic) NSDate *time;
+@property (nonatomic) NSString *direction;
+@property (nonatomic) NSNumber *latitude;
+@property (nonatomic) NSNumber *longitude;
+@property (nonatomic) NSInteger speed;
 
 @end

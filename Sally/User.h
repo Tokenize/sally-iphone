@@ -24,8 +24,8 @@
 
 @interface User : MTLModel <MTLJSONSerializing>
 
-@property (readonly) NSString *firstName;
-@property (readonly) NSString *lastName;
-@property (readonly) NSString *email;
+@property (readonly, nonatomic) NSString *firstName;
+@property (readonly, nonatomic) NSString *lastName;
+@property (readonly, nonatomic) NSString *email;
 
 @end

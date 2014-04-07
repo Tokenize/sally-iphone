@@ -28,7 +28,7 @@
 @interface SallyCommunicator : AFHTTPSessionManager
 
 @property (nonatomic, weak) id<SallyCommunicatorDelegate>delegate;
-@property NSMutableDictionary *parameters;
+@property (nonatomic) NSMutableDictionary *parameters;
 
 + (SallyCommunicator *)sharedSallyCommunicator;
 

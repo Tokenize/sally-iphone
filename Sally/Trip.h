@@ -35,11 +35,11 @@ enum {
 };
 
 @property NSUInteger tripId;
-@property (readonly) NSString *name;
-@property (readonly) NSString *description;
-@property (readonly) NSDate *startAt;
-@property (readonly) NSDate *endAt;
-@property (readonly) NSArray *locations;
+@property (readonly, nonatomic) NSString *name;
+@property (readonly, nonatomic) NSString *description;
+@property (readonly, nonatomic) NSDate *startAt;
+@property (readonly, nonatomic) NSDate *endAt;
+@property (readonly, nonatomic) NSArray *locations;
 
 - (id)initWithName:(NSString *)aName description:(NSString *)aDescription startAt:(NSDate *)start endDate:(NSDate *)end;
 

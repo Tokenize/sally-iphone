@@ -41,8 +41,8 @@ enum {
 #pragma mark - Properties
 
 @property (weak, nonatomic) id<SallyManagerDelegate> delegate;
-@property SallyCommunicator *communicator;
-@property User *user;
+@property (nonatomic) SallyCommunicator *communicator;
+@property (nonatomic) User *user;
 
 #pragma mark - Trip Methods
 
