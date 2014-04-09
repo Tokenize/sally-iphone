@@ -54,7 +54,9 @@ NSString * const TripErrorDomain = @"TripErrorDomain";
 + (NSDateFormatter *)dateFormatter {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss'Z'";
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation: @"UTC"];
+
     return dateFormatter;
 }
 
@@ -90,12 +92,12 @@ NSString * const TripErrorDomain = @"TripErrorDomain";
     }
 }
 
-- (BOOL)validateStartAt:(NSString **)tripStartAt error:(NSError **)error {
+- (BOOL)validateStartAt:(NSDate **)tripStartAt error:(NSError **)error {
     if (*tripStartAt != nil) {
         return YES;
     }
     else {
-        if (error != nil) {
+        if (error != NULL) {
             *error = [NSError errorWithDomain: TripErrorDomain code: TripErrorMissingStartAt userInfo: nil];
         }
     }
