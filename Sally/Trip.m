@@ -45,7 +45,9 @@ NSString * const TripErrorDomain = @"TripErrorDomain";
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"tripID": @"trip_id",
+             @"tripId": @"id",
+             @"name": @"name",
+             @"description": @"description",
              @"startAt": @"start_at",
              @"endAt": @"end_at"
     };
