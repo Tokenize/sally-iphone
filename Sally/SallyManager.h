@@ -47,7 +47,9 @@ enum {
 #pragma mark - Trip Methods
 
 - (void)fetchTrips;
-- (void)fetchingTripsFailedWithError:(NSError *)error;
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
 
 #pragma mark - Location Methods
 

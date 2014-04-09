@@ -76,10 +76,37 @@ describe(@"TripWorkflowSpec", ^{
             user = nil;
         });
 
+        context(@"success", ^{
+            __block NSArray *trips;
+
+            beforeEach(^{
+                trips = @[@{@"id": @1, @"name": @"Test Trip 1", @"start_at": @"2014-04-05T17:09:41.960Z"}];
+            });
+
+            afterEach(^{
+                trips = nil;
+            });
+
+            it(@"should pass an array of Trips to delegate", ^{
+                [manager sallyCommunicator: nil didFetchTrips: trips];
+
+                expect([delegate.receivedTrips count]).to.equal(1);
+                expect([[delegate.receivedTrips objectAtIndex: 0] class]).to.equal([Trip class]);
+                expect([[delegate.receivedTrips objectAtIndex: 0] name]).to.equal(@"Test Trip 1");
+                expect([[delegate.receivedTrips objectAtIndex: 0] startAt]).toNot.beNil();
+            });
+
+            it(@"should not notify the delegate of any error", ^{
+                [manager sallyCommunicator: nil didFetchTrips: trips];
+
+                expect([delegate fetchError]).to.beNil();
+            });
+        });
+
         context(@"failure", ^{
             it(@"should return a higher-level error to delegate", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
-                [manager fetchingTripsFailedWithError: communicatorError];
+                [manager sallyCommunicator: nil fetchTripsFailedWithError: communicatorError];
 
                 expect(communicatorError).toNot.equal([delegate fetchError]);
 
@@ -88,7 +115,7 @@ describe(@"TripWorkflowSpec", ^{
 
             it(@"should include underlying error", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
-                [manager fetchingTripsFailedWithError: communicatorError];
+                [manager sallyCommunicator: nil fetchTripsFailedWithError: communicatorError];
 
                 expect([[[delegate fetchError] userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
 
