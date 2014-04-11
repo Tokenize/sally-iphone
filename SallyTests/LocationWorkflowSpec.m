@@ -56,11 +56,42 @@ describe(@"LocationWorkflowSpec", ^{
             communicator = nil;
         });
 
+        context(@"success", ^{
+            __block NSArray *locations;
+
+            beforeEach(^{
+                locations = @[@{@"id": @1, @"time": @"2014-03-29T16:43:23.838Z", @"direction": @"North", @"latitude": @123456, @"longitude": @654321, @"speed": @50}];
+            });
+
+            afterEach(^{
+                locations = nil;
+            });
+
+            it(@"should pass an array of Locations to delegate", ^{
+                [manager sallyCommunicator: nil didFetchLocationsForTrip: locations];
+
+                expect([delegate.receivedLocations count]).to.equal(1);
+                expect([[delegate.receivedLocations firstObject] class]).to.equal(Location.class);
+                expect([[delegate.receivedLocations firstObject] locationId]).to.equal(1);
+                expect([[delegate.receivedLocations firstObject] time]).toNot.beNil();
+                expect([[delegate.receivedLocations firstObject] travelDirection]).to.equal(@"North");
+                expect([[delegate.receivedLocations firstObject] latitude]).to.equal(123456);
+                expect([[delegate.receivedLocations firstObject] longitude]).to.equal(654321);
+                expect([[delegate.receivedLocations firstObject] travelSpeed]).to.equal(50);
+            });
+
+            it(@"should not notify the delegate of any errors", ^{
+                [manager sallyCommunicator: nil didFetchLocationsForTrip: locations];
+
+                expect(delegate.error).to.beNil();
+            });
+        });
+
         context(@"failure", ^{
             it(@"should return a higher-level error to delegate", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
 
-                [manager fetchingLocationsForTrip: trip failedWithError: communicatorError];
+                [manager sallyCommunicator: nil fetchLocationsForTripFailedWithError: communicatorError];
 
                 expect(communicatorError).toNot.equal(delegate.error);
 
@@ -70,7 +101,7 @@ describe(@"LocationWorkflowSpec", ^{
             it(@"should include underlying error", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
 
-                [manager fetchingLocationsForTrip: trip failedWithError: communicatorError];
+                [manager sallyCommunicator: nil fetchLocationsForTripFailedWithError: communicatorError];
 
                 expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
 
@@ -97,10 +128,10 @@ describe(@"LocationWorkflowSpec", ^{
                 expect(delegate.location).toNot.beNil();
                 expect(delegate.location.locationId).to.equal(1);
                 expect(delegate.location.time).toNot.beNil();
-                expect(delegate.location.direction).to.equal(@"North");
+                expect(delegate.location.travelDirection).to.equal(@"North");
                 expect(delegate.location.latitude).to.equal(123456);
                 expect(delegate.location.longitude).to.equal(654321);
-                expect(delegate.location.speed).to.equal(50);
+                expect(delegate.location.travelSpeed).to.equal(50);
             });
 
             it(@"should not notify the delegate of any errors", ^{

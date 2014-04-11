@@ -26,9 +26,9 @@
 
 @property (nonatomic) NSUInteger locationId;
 @property (nonatomic) NSDate *time;
-@property (nonatomic) NSString *direction;
+@property (nonatomic) NSString *travelDirection;
 @property (nonatomic) NSNumber *latitude;
 @property (nonatomic) NSNumber *longitude;
-@property (nonatomic) NSInteger speed;
+@property (nonatomic) NSInteger travelSpeed;
 
 @end

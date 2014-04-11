@@ -111,12 +111,19 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     [communicator fetchLocationsForTrip: tripID];
 }
 
-- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchLocationsForTrip:(NSArray *)locations
+{
+    NSValueTransformer *locationsTransformer = [MTLValueTransformer mtl_JSONArrayTransformerWithModelClass: Location.class];
+
+    [self.delegate sallyManager: self didFetchLocationsForTrip: [locationsTransformer transformedValue: locations]];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchLocationsForTripFailedWithError:(NSError *)error
 {
     NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
     NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorLocationFetchCode userInfo: errorInfo];
     
-    [delegate fetchingLocationsForTrip: trip failedWithError: reportableError];
+    [delegate sallyManager: self fetchLocationsForTripFailedWithError: reportableError];
 }
 
 @end

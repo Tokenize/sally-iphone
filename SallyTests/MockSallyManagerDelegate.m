@@ -25,12 +25,12 @@
     self.receivedTrips = trips;
 }
 
-- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)fetchLocationError
+- (void)sallyManager:(SallyManager *)manager fetchLocationsForTripFailedWithError:(NSError *)fetchError
 {
-    self.error = fetchLocationError;
+    self.error = fetchError;
 }
 
-- (void)didReceivedLocations:(NSArray *)locations
+- (void)sallyManager:(SallyManager *)manager didFetchLocationsForTrip:(NSArray *)locations
 {
     self.receivedLocations = locations;
 }

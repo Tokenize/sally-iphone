@@ -25,13 +25,19 @@
 
 @synthesize locationId;
 @synthesize time;
-@synthesize direction;
+@synthesize travelDirection;
 @synthesize latitude;
 @synthesize longitude;
-@synthesize speed;
+@synthesize travelSpeed;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{@"locationId": @"id"};
+    return @{@"locationId": @"id",
+             @"time": @"time",
+             @"travelDirection": @"direction",
+             @"latitude": @"latitude",
+             @"longitude": @"longitude",
+             @"travelSpeed": @"speed"
+    };
 }
 
 @end

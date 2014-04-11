@@ -122,7 +122,7 @@ describe(@"TripSpec", ^{
 
             newLocation1.time = [NSDate distantPast];
             newLocation2.time = [NSDate distantFuture];
-            newLocation3.direction = @"South";
+            newLocation3.travelDirection = @"South";
 
             [trip addLocation: newLocation1];
             [trip addLocation: newLocation2];
