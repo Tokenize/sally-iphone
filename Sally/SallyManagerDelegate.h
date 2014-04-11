@@ -28,6 +28,8 @@
 
 @protocol SallyManagerDelegate <NSObject>
 
+- (void)sallyManager:(SallyManager *)manager didSignInWithToken:(NSString *)token;
+- (void)sallyManager:(SallyManager *)manager signInFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didFetchTrips:(NSArray *)trips;
 - (void)sallyManager:(SallyManager *)manager fetchTripsFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didCreateTrip:(Trip *)trip;

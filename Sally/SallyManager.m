@@ -45,6 +45,21 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     delegate = newDelegate;
 }
 
+#pragma mark - Authentication Methods
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didSignInWithToken:(NSString *)token
+{
+    [self.delegate sallyManager: self didSignInWithToken: token];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator signInFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorSignIn userInfo: errorInfo];
+
+    [self.delegate sallyManager: self signInFailedWithError: reportableError];
+}
+
 #pragma mark - Trip Methods
 
 - (void)fetchTrips

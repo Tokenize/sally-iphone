@@ -16,5 +16,6 @@
 @property (nonatomic) NSArray *receivedLocations;
 @property (nonatomic) Trip *trip;
 @property (nonatomic) Location *location;
+@property (nonatomic) NSString *auth_token;
 
 @end

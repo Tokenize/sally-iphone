@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A45AAF38C88B4D749D1E7734 /* libPods-SallyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */; };
+		B813A4EB18F78A790006F044 /* AuthenticationWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */; };
 		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
 		B851F7811897327E0099A787 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserSpec.m */; };
@@ -57,6 +58,7 @@
 		075C483F84A3447B81D5AFC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SallyTests.xcconfig"; path = "Pods/Pods-SallyTests.xcconfig"; sourceTree = "<group>"; };
 		9E55BECDE87D43E98C7AE469 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationWorkflowSpec.m; sourceTree = "<group>"; };
 		B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicatorDelegate.h; sourceTree = "<group>"; };
 		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */,
 				B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */,
 				B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */,
+				B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */,
 			);
 			path = SallyTests;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				B8F01A9A189F23BC003A80A0 /* TripWorkflowSpec.m in Sources */,
 				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
+				B813A4EB18F78A790006F044 /* AuthenticationWorkflowSpec.m in Sources */,
 				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
 				B8C7E5AB18B2735F009FE36C /* LocationWorkflowSpec.m in Sources */,
 				B851F7811897327E0099A787 /* UserSpec.m in Sources */,

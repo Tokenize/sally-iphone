@@ -14,6 +14,17 @@
 @synthesize receivedTrips;
 @synthesize receivedLocations;
 @synthesize trip;
+@synthesize auth_token;
+
+- (void)sallyManager:(SallyManager *)manager didSignInWithToken:(NSString *)token
+{
+    self.auth_token = token;
+}
+
+- (void)sallyManager:(SallyManager *)manager signInFailedWithError:(NSError *)signInError
+{
+    self.error = signInError;
+}
 
 - (void)sallyManager:(SallyManager *)manager didFetchTrips:(NSArray *)trips
 {
