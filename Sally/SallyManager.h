@@ -35,7 +35,8 @@ extern NSString *SallyManagerErrors;
 
 enum {
     SallyManagerErrorTripFetchCode,
-    SallyManagerErrorLocationFetchCode
+    SallyManagerErrorCreateTrip,
+    SallyManagerErrorLocationFetchCode,
 };
 
 #pragma mark - Properties
@@ -47,9 +48,12 @@ enum {
 #pragma mark - Trip Methods
 
 - (void)fetchTrips;
+- (void)createTrip:(Trip *)trip;
 
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)trip;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error;
 
 #pragma mark - Location Methods
 

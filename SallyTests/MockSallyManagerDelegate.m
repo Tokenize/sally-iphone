@@ -10,13 +10,14 @@
 
 @implementation MockSallyManagerDelegate
 
-@synthesize fetchError;
+@synthesize error;
 @synthesize receivedTrips;
 @synthesize receivedLocations;
+@synthesize trip;
 
-- (void)fetchingTripsFailedWithError:(NSError *)error
+- (void)fetchingTripsFailedWithError:(NSError *)fetchError
 {
-    self.fetchError = error;
+    self.error = fetchError;
 }
 
 - (void)didReceivedTrips:(NSArray *)trips
@@ -24,14 +25,24 @@
     self.receivedTrips = trips;
 }
 
-- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error
+- (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)fetchLocationError
 {
-    self.fetchError = error;
+    self.error = fetchLocationError;
 }
 
 - (void)didReceivedLocations:(NSArray *)locations
 {
     self.receivedLocations = locations;
+}
+
+- (void)sallyManager:(id)manager didCreateTrip:(Trip *)createdTrip
+{
+    self.trip = createdTrip;
+}
+
+- (void)sallyManager:(id)manager createTripFailedWithError:(NSError *)createError
+{
+    self.error = createError;
 }
 
 @end

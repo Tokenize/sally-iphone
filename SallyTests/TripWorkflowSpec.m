@@ -99,7 +99,7 @@ describe(@"TripWorkflowSpec", ^{
             it(@"should not notify the delegate of any error", ^{
                 [manager sallyCommunicator: nil didFetchTrips: trips];
 
-                expect([delegate fetchError]).to.beNil();
+                expect(delegate.error).to.beNil();
             });
         });
 
@@ -108,7 +108,7 @@ describe(@"TripWorkflowSpec", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
                 [manager sallyCommunicator: nil fetchTripsFailedWithError: communicatorError];
 
-                expect(communicatorError).toNot.equal([delegate fetchError]);
+                expect(communicatorError).toNot.equal(delegate.error);
 
                 communicatorError = nil;
             });
@@ -117,9 +117,64 @@ describe(@"TripWorkflowSpec", ^{
                 NSError *communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
                 [manager sallyCommunicator: nil fetchTripsFailedWithError: communicatorError];
 
-                expect([[[delegate fetchError] userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
+                expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
 
                 communicatorError = nil;
+            });
+        });
+    });
+
+    describe(@"create trip", ^{
+        context(@"success", ^{
+            __block NSDictionary *tripJSON;
+
+            beforeEach(^{
+                tripJSON = @{@"id": @2, @"name": @"Trip 2", @"start_at": @"2014-04-09T23:54:06.000Z"};
+            });
+
+            afterEach(^{
+                tripJSON = nil;
+            });
+
+            context(@"success", ^{
+                it(@"should pass the created trip to the delegate", ^{
+                    [manager sallyCommunicator: nil didCreateTrip: tripJSON];
+
+                    expect(delegate.trip).toNot.beNil();
+                    expect(delegate.trip.tripId).to.equal(2);
+                    expect(delegate.trip.name).to.equal(@"Trip 2");
+                    expect(delegate.trip.startAt).toNot.beNil();
+                });
+
+                it(@"should not notify the delegate of any errors", ^{
+                    [manager sallyCommunicator: nil didCreateTrip: tripJSON];
+
+                    expect(delegate.error).to.beNil();
+                });
+            });
+
+            context(@"failure", ^{
+                __block NSError *communicatorError;
+
+                beforeEach(^{
+                    communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
+                });
+
+                afterEach(^{
+                    communicatorError = nil;
+                });
+
+                it(@"should return a higher-level error to delegate", ^{
+                    [manager sallyCommunicator: nil createTripFailedWithError: communicatorError];
+
+                    expect(delegate.error).toNot.equal(communicatorError);
+                });
+
+                it(@"should include underlying error", ^{
+                    [manager sallyCommunicator: nil createTripFailedWithError: communicatorError];
+
+                    expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
+                });
             });
         });
     });

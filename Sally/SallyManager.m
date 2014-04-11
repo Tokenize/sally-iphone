@@ -44,10 +44,21 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     delegate = newDelegate;
 }
 
+#pragma mark - Trip Methods
+
 - (void)fetchTrips
 {
     [communicator fetchTrips];
 }
+
+- (void)createTrip:(Trip *)trip
+{
+    NSDictionary *tripParameters = [MTLJSONAdapter JSONDictionaryFromModel: trip];
+
+    [self.communicator createTrip: tripParameters];
+}
+
+#pragma mark -
 
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips
 {
@@ -60,8 +71,23 @@ NSString *SallyManagerErrors = @"SallyManagerError";
 {
     NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
     NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorTripFetchCode userInfo: errorInfo];
-    
+
     [delegate fetchingTripsFailedWithError: reportableError];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)tripJSON
+{
+    Trip *trip = [MTLJSONAdapter modelOfClass: Trip.class fromJSONDictionary: tripJSON error: nil];
+
+    [self.delegate sallyManager: self didCreateTrip: trip];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorCreateTrip userInfo: errorInfo];
+
+    [self.delegate sallyManager: self createTripFailedWithError: reportableError];
 }
 
 - (void)fetchLocationsForTrip:(NSUInteger)tripID

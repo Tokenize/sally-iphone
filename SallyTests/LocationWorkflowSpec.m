@@ -62,7 +62,7 @@ describe(@"LocationWorkflowSpec", ^{
 
                 [manager fetchingLocationsForTrip: trip failedWithError: communicatorError];
 
-                expect(communicatorError).toNot.equal([delegate fetchError]);
+                expect(communicatorError).toNot.equal(delegate.error);
 
                 communicatorError = nil;
             });
@@ -72,7 +72,7 @@ describe(@"LocationWorkflowSpec", ^{
 
                 [manager fetchingLocationsForTrip: trip failedWithError: communicatorError];
 
-                expect([[[delegate fetchError] userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
+                expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
 
                 communicatorError = nil;
             });

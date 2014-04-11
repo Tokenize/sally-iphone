@@ -11,8 +11,9 @@
 
 @interface MockSallyManagerDelegate : NSObject <SallyManagerDelegate>
 
-@property NSError *fetchError;
-@property NSArray *receivedTrips;
-@property NSArray *receivedLocations;
+@property (nonatomic) NSError *error;
+@property (nonatomic) NSArray *receivedTrips;
+@property (nonatomic) NSArray *receivedLocations;
+@property (nonatomic) Trip *trip;
 
 @end

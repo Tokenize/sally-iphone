@@ -23,11 +23,15 @@
 
 // Forward Declarations
 @class Trip;
+@class SallyManager;
 
 @protocol SallyManagerDelegate <NSObject>
 
 - (void)fetchingTripsFailedWithError:(NSError *)error;
 - (void)fetchingLocationsForTrip:(Trip *)trip failedWithError:(NSError *)error;
+
+- (void)sallyManager:(SallyManager *)manager didCreateTrip:(Trip *)trip;
+- (void)sallyManager:(SallyManager *)manager createTripFailedWithError:(NSError *)error;
 
 - (void)didReceivedTrips:(NSArray *)trips;
 - (void)didReceivedLocations:(NSArray *)locations;
