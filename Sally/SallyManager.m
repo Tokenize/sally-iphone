@@ -65,7 +65,7 @@ NSString *SallyManagerErrors = @"SallyManagerError";
 {
     NSValueTransformer *tripsTransformer = [MTLValueTransformer mtl_JSONArrayTransformerWithModelClass: Trip.class];
 
-    [self.delegate didReceivedTrips: [tripsTransformer transformedValue: trips]];
+    [self.delegate sallyManager: self didFetchTrips: [tripsTransformer transformedValue: trips]];
 }
 
 - (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error
@@ -73,7 +73,7 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
     NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorTripFetchCode userInfo: errorInfo];
 
-    [delegate fetchingTripsFailedWithError: reportableError];
+    [self.delegate sallyManager: self fetchTripsFailedWithError: reportableError];
 }
 
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)tripJSON

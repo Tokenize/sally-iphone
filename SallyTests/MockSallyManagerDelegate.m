@@ -15,14 +15,14 @@
 @synthesize receivedLocations;
 @synthesize trip;
 
-- (void)fetchingTripsFailedWithError:(NSError *)fetchError
-{
-    self.error = fetchError;
-}
-
-- (void)didReceivedTrips:(NSArray *)trips
+- (void)sallyManager:(SallyManager *)manager didFetchTrips:(NSArray *)trips
 {
     self.receivedTrips = trips;
+}
+
+- (void)sallyManager:(SallyManager *)manager fetchTripsFailedWithError:(NSError *)fetchError
+{
+    self.error = fetchError;
 }
 
 - (void)sallyManager:(SallyManager *)manager fetchLocationsForTripFailedWithError:(NSError *)fetchError
