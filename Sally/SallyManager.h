@@ -20,6 +20,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SallyCommunicatorDelegate.h"
 
 // Forward Declarations (Protocols)
 @protocol SallyManagerDelegate;
@@ -29,7 +30,7 @@
 @class Trip;
 @class User;
 
-@interface SallyManager : NSObject
+@interface SallyManager : NSObject <SallyCommunicatorDelegate>
 
 extern NSString *SallyManagerErrors;
 
@@ -51,17 +52,6 @@ enum {
 
 - (void)fetchTrips;
 - (void)createTrip:(Trip *)trip;
-
-- (void)sallyCommunicator:(SallyCommunicator *)communicator didSignInWithToken:(NSString *)token;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator signInFailedWithError:(NSError *)error;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchTrips:(NSArray *)trips;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)trip;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateLocation:(NSDictionary *)location;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator createLocationFailedWithError:(NSError *)error;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator didFetchLocationsForTrip:(NSArray *)locations;
-- (void)sallyCommunicator:(SallyCommunicator *)communicator fetchLocationsForTripFailedWithError:(NSError *)error;
 
 #pragma mark - Location Methods
 
