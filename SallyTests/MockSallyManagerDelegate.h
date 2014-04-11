@@ -15,5 +15,6 @@
 @property (nonatomic) NSArray *receivedTrips;
 @property (nonatomic) NSArray *receivedLocations;
 @property (nonatomic) Trip *trip;
+@property (nonatomic) Location *location;
 
 @end

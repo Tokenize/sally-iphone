@@ -37,6 +37,7 @@ enum {
     SallyManagerErrorTripFetchCode,
     SallyManagerErrorCreateTrip,
     SallyManagerErrorLocationFetchCode,
+    SallyManagerErrorCreateLocation
 };
 
 #pragma mark - Properties
@@ -54,6 +55,8 @@ enum {
 - (void)sallyCommunicator:(SallyCommunicator *)communicator fetchTripsFailedWithError:(NSError *)error;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateTrip:(NSDictionary *)trip;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator createTripFailedWithError:(NSError *)error;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateLocation:(NSDictionary *)location;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createLocationFailedWithError:(NSError *)error;
 
 #pragma mark - Location Methods
 

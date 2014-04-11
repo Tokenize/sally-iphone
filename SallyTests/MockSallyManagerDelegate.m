@@ -45,4 +45,14 @@
     self.error = createError;
 }
 
+- (void)sallyManager:(SallyManager *)manager didCreateLocation:(Location *)createdLocation
+{
+    self.location = createdLocation;
+}
+
+- (void)sallyManager:(SallyManager *)manager createLocationFailedWithError:(NSError *)createError
+{
+    self.error = createError;
+}
+
 @end

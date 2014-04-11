@@ -23,6 +23,7 @@
 #import "SallyManagerDelegate.h"
 #import "SallyCommunicator.h"
 #import "Trip.h"
+#import "Location.h"
 #import "User.h"
 
 @implementation SallyManager
@@ -88,6 +89,21 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorCreateTrip userInfo: errorInfo];
 
     [self.delegate sallyManager: self createTripFailedWithError: reportableError];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateLocation:(NSDictionary *)locationJSON
+{
+    Location *location = [MTLJSONAdapter modelOfClass: Location.class fromJSONDictionary: locationJSON error: nil];
+
+    [self.delegate sallyManager: self didCreateLocation: location];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator createLocationFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorCreateLocation userInfo: errorInfo];
+
+    [self.delegate sallyManager: self createLocationFailedWithError: reportableError];
 }
 
 - (void)fetchLocationsForTrip:(NSUInteger)tripID
