@@ -36,6 +36,8 @@
 - (void)sallyManager:(SallyManager *)manager createTripFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didUpdateTrip:(Trip *)trip;
 - (void)sallyManager:(SallyManager *)manager updateTripFailedWithError:(NSError *)error;
+- (void)sallyManager:(SallyManager *)manager didDeleteTrip:(Trip *)trip;
+- (void)sallyManager:(SallyManager *)manager deleteTripFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didFetchLocationsForTrip:(NSArray *)locations;
 - (void)sallyManager:(SallyManager *)manager fetchLocationsForTripFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didCreateLocation:(Location *)location;

@@ -76,4 +76,14 @@
     self.error = updateError;
 }
 
+- (void)sallyManager:(SallyManager *)manager didDeleteTrip:(Trip *)deletedTrip
+{
+    self.trip = deletedTrip;
+}
+
+- (void)sallyManager:(SallyManager *)manager deleteTripFailedWithError:(NSError *)deleteError
+{
+    self.error = deleteError;
+}
+
 @end

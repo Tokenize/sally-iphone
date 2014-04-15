@@ -38,6 +38,7 @@ enum {
     SallyManagerErrorTripFetchCode,
     SallyManagerErrorCreateTrip,
     SallyManagerErrorUpdateTrip,
+    SallyManagerErrorDeleteTrip,
     SallyManagerErrorLocationFetchCode,
     SallyManagerErrorCreateLocation,
     SallyManagerErrorSignIn
