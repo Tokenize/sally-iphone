@@ -178,6 +178,61 @@ describe(@"TripWorkflowSpec", ^{
             });
         });
     });
+
+    describe(@"update trip", ^{
+        context(@"success", ^{
+            __block NSDictionary *tripJSON;
+
+            beforeEach(^{
+                tripJSON = @{@"id": @3, @"name": @"Trip 3", @"start_at": @"2014-04-14T23:54:06.000Z"};
+            });
+
+            afterEach(^{
+                tripJSON = nil;
+            });
+
+            context(@"success", ^{
+                it(@"should pass the updated trip to the delegate", ^{
+                    [manager sallyCommunicator: nil didUpdateTrip: tripJSON];
+
+                    expect(delegate.trip).toNot.beNil();
+                    expect(delegate.trip.tripId).to.equal(3);
+                    expect(delegate.trip.name).to.equal(@"Trip 3");
+                    expect(delegate.trip.startAt).toNot.beNil();
+                });
+
+                it(@"should not notify the delegate of any errors", ^{
+                    [manager sallyCommunicator: nil didUpdateTrip: tripJSON];
+
+                    expect(delegate.error).to.beNil();
+                });
+            });
+
+            context(@"failure", ^{
+                __block NSError *communicatorError;
+
+                beforeEach(^{
+                    communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
+                });
+
+                afterEach(^{
+                    communicatorError = nil;
+                });
+
+                it(@"should return a higher-level error to delegate", ^{
+                    [manager sallyCommunicator: nil updateTripFailedWithError: communicatorError];
+
+                    expect(delegate.error).toNot.equal(communicatorError);
+                });
+
+                it(@"should include underlying error", ^{
+                    [manager sallyCommunicator: nil updateTripFailedWithError: communicatorError];
+
+                    expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
+                });
+            });
+        });
+    });
 });
 
 SpecEnd

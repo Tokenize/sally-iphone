@@ -106,6 +106,21 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     [self.delegate sallyManager: self createTripFailedWithError: reportableError];
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didUpdateTrip:(NSDictionary *)tripJSON
+{
+    Trip *trip = [MTLJSONAdapter modelOfClass: Trip.class fromJSONDictionary: tripJSON error: nil];
+
+    [self.delegate sallyManager: self didUpdateTrip: trip];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator updateTripFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorUpdateTrip userInfo: errorInfo];
+
+    [self.delegate sallyManager: self updateTripFailedWithError: reportableError];
+}
+
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didCreateLocation:(NSDictionary *)locationJSON
 {
     Location *location = [MTLJSONAdapter modelOfClass: Location.class fromJSONDictionary: locationJSON error: nil];

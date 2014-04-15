@@ -66,4 +66,14 @@
     self.error = createError;
 }
 
+- (void)sallyManager:(SallyManager *)manager didUpdateTrip:(Trip *)updatedTrip
+{
+    self.trip = updatedTrip;
+}
+
+- (void)sallyManager:(SallyManager *)manager updateTripFailedWithError:(NSError *)updateError
+{
+    self.error = updateError;
+}
+
 @end

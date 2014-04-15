@@ -37,6 +37,7 @@ extern NSString *SallyManagerErrors;
 enum {
     SallyManagerErrorTripFetchCode,
     SallyManagerErrorCreateTrip,
+    SallyManagerErrorUpdateTrip,
     SallyManagerErrorLocationFetchCode,
     SallyManagerErrorCreateLocation,
     SallyManagerErrorSignIn
