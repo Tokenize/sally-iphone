@@ -60,4 +60,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didDeleteTrip:(NSDictionary *)trip {
+    self.trip = trip;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator deleteTripFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

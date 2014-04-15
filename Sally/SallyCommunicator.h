@@ -38,6 +38,7 @@
 - (void)fetchTrips;
 - (void)createTrip:(NSDictionary *)tripAttributes;
 - (void)updateTrip:(NSDictionary *)tripAttributes;
+- (void)deleteTrip:(NSUInteger)tripID;
 
 #pragma mark - Location Methods
 - (void)fetchLocationsForTrip:(NSUInteger)tripID;

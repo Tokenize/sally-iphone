@@ -134,4 +134,17 @@
     tripUrl = nil;
 }
 
+- (void)deleteTrip:(NSUInteger)tripID {
+    NSString  *tripUrl = [NSString stringWithFormat: @"trips/%lu", (unsigned long)tripID];
+
+    [self DELETE: tripUrl parameters: self.parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didDeleteTrip: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self deleteTripFailedWithError: error];
+    }];
+
+    tripUrl = nil;
+}
+
 @end

@@ -38,5 +38,7 @@
 - (void)sallyCommunicator:(SallyCommunicator *)communicator createLocationFailedWithError:(NSError *)error;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator didUpdateTrip:(NSDictionary *)trip;
 - (void)sallyCommunicator:(SallyCommunicator *)communicator updateTripFailedWithError:(NSError *)error;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didDeleteTrip:(NSDictionary *)trip;
+- (void)sallyCommunicator:(SallyCommunicator *)communicator deleteTripFailedWithError:(NSError *)error;
 
 @end

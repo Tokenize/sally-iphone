@@ -255,6 +255,41 @@ describe(@"SallyCommunicator", ^{
             });
         });
     });
+
+    describe(@"Delete trip", ^{
+        context(@"success", ^{
+            it(@"should pass the deleted trip to the delegate", ^{
+                stubRequest(@"DELETE", @"https://sally-api.tokenize.ca/api/trips/1?auth_token=secret").
+                andReturn(200).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"id\":1,\"name\":\"Test 1\",\"start_at\":\"2014-03-25T00:41:21+00:00\"}");
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator deleteTrip: 1];
+
+                expect(communicatorDelegate.trip).willNot.beNil();
+                expect(communicatorDelegate.trip[@"id"]).will.equal(1);
+                expect(communicatorDelegate.trip[@"name"]).will.equal(@"Test 1");
+                expect(communicatorDelegate.trip[@"start_at"]).willNot.beNil();
+                expect(communicatorDelegate.error).will.beNil();
+            });
+        });
+
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                stubRequest(@"DELETE", @"https://sally-api.tokenize.ca/api/trips/1?auth_token=secret").
+                andReturn(404).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"error\":\"Trip not found.\"}");
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator deleteTrip: 1];
+
+                expect(communicatorDelegate.error).willNot.beNil();
+                expect(communicatorDelegate.trip).will.beNil();
+            });
+        });
+    });
 });
 
 SpecEnd
