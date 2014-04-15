@@ -27,16 +27,23 @@
 
 @interface SallyCommunicator : AFHTTPSessionManager
 
+#pragma mark - Properties
 @property (nonatomic, weak) id<SallyCommunicatorDelegate>delegate;
 @property (nonatomic) NSMutableDictionary *parameters;
 
+#pragma mark - Class Methods
 + (SallyCommunicator *)sharedSallyCommunicator;
 
+#pragma mark - Trip Methods
 - (void)fetchTrips;
-- (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)createTrip:(NSDictionary *)tripAttributes;
+- (void)updateTrip:(NSDictionary *)tripAttributes;
+
+#pragma mark - Location Methods
+- (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)createLocationForTrip:(NSDictionary *)locationAttributes;
 
+#pragma mark - Authentication Methods
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;
 
 @end

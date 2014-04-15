@@ -210,6 +210,51 @@ describe(@"SallyCommunicator", ^{
             });
         });
     });
+
+    describe(@"Update trip", ^{
+        context(@"success", ^{
+            it(@"should pass the updated trip to the delegate", ^{
+                stubRequest(@"PUT", @"https://sally-api.tokenize.ca/api/trips/1").
+                withHeader(@"Content-Type", @"application/json; charset=utf-8").
+                withBody(@"{\"auth_token\":\"secret\",\"id\":1,\"name\":\"Test 3\",\"start_at\":\"4001-01-01 00:00:00 +0000\"}").
+                andReturn(200).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"id\":1,\"name\":\"Test 3\",\"start_at\":\"4001-01-01T00:00:00.000Z\"}");
+
+                NSDictionary *tripParameters = @{@"id": @1, @"name": @"Test 3", @"start_at": [[NSDate distantFuture] description]};
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator updateTrip: tripParameters];
+
+                expect(communicatorDelegate.trip).willNot.beNil();
+                expect(communicatorDelegate.trip[@"id"]).will.equal(@1);
+                expect(communicatorDelegate.trip[@"name"]).will.equal(@"Test 3");
+                expect(communicatorDelegate.trip[@"start_at"]).willNot.beNil();
+                expect(communicatorDelegate.error).will.beNil();
+
+                tripParameters = nil;
+            });
+        });
+
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                stubRequest(@"PUT", @"https://sally-api.tokenize.ca/api/trips/1").
+                withHeader(@"Content-Type", @"application/json; charset=utf-8").
+                withBody(@"{\"auth_token\":\"secret\",\"id\":1,\"name\":\"\",\"start_at\":\"4001-01-01 00:00:00 +0000\"}").
+                andReturn(403).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"error\":\"Validation failed: Name can't be blank\"}");
+
+                NSDictionary *tripParameters = @{@"id": @1, @"name": @"", @"start_at": [[NSDate distantFuture] description]};
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator updateTrip: tripParameters];
+
+                expect(communicatorDelegate.error).willNot.beNil();
+                expect(communicatorDelegate.trip).will.beNil();
+            });
+        });
+    });
 });
 
 SpecEnd

@@ -52,4 +52,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didUpdateTrip:(NSDictionary *)trip {
+    self.trip = trip;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator updateTripFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

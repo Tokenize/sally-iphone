@@ -117,4 +117,21 @@
     temporaryParams = nil;
 }
 
+- (void)updateTrip:(NSDictionary *)tripAttributes {
+    NSString  *tripUrl = [NSString stringWithFormat: @"trips/%@", tripAttributes[@"id"]];
+
+    NSMutableDictionary *temporaryParams = [[NSMutableDictionary alloc] initWithDictionary: tripAttributes];
+    [temporaryParams addEntriesFromDictionary: self.parameters];
+
+    [self PUT: tripUrl parameters: temporaryParams success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didUpdateTrip: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self updateTripFailedWithError: error];
+    }];
+
+    temporaryParams = nil;
+    tripUrl = nil;
+}
+
 @end
