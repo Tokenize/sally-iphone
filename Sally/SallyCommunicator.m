@@ -164,4 +164,17 @@
     locationsUrl = nil;
 }
 
+- (void)deleteLocationForTrip:(NSDictionary *)locationAttributes {
+    NSString  *locationsUrl = [NSString stringWithFormat: @"trips/%@/locations/%@", locationAttributes[@"trip_id"], locationAttributes[@"id"]];
+
+    [self DELETE: locationsUrl parameters: self.parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didDeleteLocation: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self deleteLocationFailedWithError: error];
+    }];
+
+    locationsUrl = nil;
+}
+
 @end

@@ -44,6 +44,7 @@
 - (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)createLocationForTrip:(NSDictionary *)locationAttributes;
 - (void)updateLocationForTrip:(NSDictionary *)locationAttributes;
+- (void)deleteLocationForTrip:(NSDictionary *)locationAttributes;
 
 #pragma mark - Authentication Methods
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;

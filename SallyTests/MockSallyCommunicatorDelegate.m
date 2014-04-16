@@ -76,4 +76,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didDeleteLocation:(NSDictionary *)location {
+    self.location = location;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator deleteLocationFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

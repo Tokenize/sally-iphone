@@ -330,6 +330,42 @@ describe(@"SallyCommunicator", ^{
             });
         });
     });
+
+    context(@"Delete location", ^{
+        context(@"success", ^{
+            it(@"should pass the deleted location to the delegate", ^{
+                stubRequest(@"DELETE", @"https://sally-api.tokenize.ca/api/trips/1/locations/2?auth_token=secret").
+                andReturn(200).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"id\":2,\"latitude\":\"123456789\",\"longitude\":\"987654321\",\"time\":\"4001-01-01 00:00:00 +0000\"}");
+
+                NSDictionary *locationAttributes = @{@"id": @2, @"trip_id": @1};
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator deleteLocationForTrip: locationAttributes];
+
+                expect(communicatorDelegate.location).willNot.beNil();
+                expect(communicatorDelegate.error).will.beNil();
+            });
+        });
+
+        context(@"failure", ^{
+            it(@"should notify delegate of error", ^{
+                stubRequest(@"DELETE", @"https://sally-api.tokenize.ca/api/trips/1/locations/2?auth_token=secret").
+                andReturn(404).
+                withHeader(@"Content-Type", @"application/json").
+                withBody(@"{\"error\": \"Location not found\"}");
+
+                NSDictionary *locationAttributes = @{@"id": @2, @"trip_id": @1};
+
+                communicator.parameters[@"auth_token"] = @"secret";
+                [communicator deleteLocationForTrip: locationAttributes];
+
+                expect(communicatorDelegate.error).willNot.beNil();
+                expect(communicatorDelegate.location).will.beNil();
+            });
+        });
+    });
 });
 
 SpecEnd
