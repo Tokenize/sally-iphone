@@ -147,4 +147,21 @@
     tripUrl = nil;
 }
 
+- (void)updateLocationForTrip:(NSDictionary *)locationAttributes {
+    NSString  *locationsUrl = [NSString stringWithFormat: @"trips/%@/locations/%@", locationAttributes[@"trip_id"], locationAttributes[@"id"]];
+
+    NSMutableDictionary *temporaryParams = [[NSMutableDictionary alloc] initWithDictionary: locationAttributes];
+    [temporaryParams addEntriesFromDictionary: self.parameters];
+
+    [self PUT: locationsUrl parameters: temporaryParams success:^(NSURLSessionDataTask *task, id responseObject) {
+        [self.delegate sallyCommunicator: self didUpdateLocation: responseObject];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self.delegate sallyCommunicator: self updateLocationFailedWithError: error];
+    }];
+
+    temporaryParams = nil;
+    locationsUrl = nil;
+}
+
 @end

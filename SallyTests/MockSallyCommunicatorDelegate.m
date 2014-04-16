@@ -68,4 +68,12 @@
     self.error = error;
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didUpdateLocation:(NSDictionary *)location {
+    self.location = location;
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator updateLocationFailedWithError:(NSError *)error {
+    self.error = error;
+}
+
 @end

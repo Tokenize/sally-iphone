@@ -43,6 +43,7 @@
 #pragma mark - Location Methods
 - (void)fetchLocationsForTrip:(NSUInteger)tripID;
 - (void)createLocationForTrip:(NSDictionary *)locationAttributes;
+- (void)updateLocationForTrip:(NSDictionary *)locationAttributes;
 
 #pragma mark - Authentication Methods
 - (void)signInWithEmail:(NSString *)email password:(NSString *)password;
