@@ -165,6 +165,64 @@ describe(@"LocationWorkflowSpec", ^{
             });
         });
     });
+
+    describe(@"update location for trip", ^{
+        context(@"success", ^{
+            __block NSDictionary *locationJSON;
+
+            beforeEach(^{
+                locationJSON = @{@"id": @1, @"time": @"2014-03-29T16:43:23.838Z", @"direction": @"North", @"latitude": @123456, @"longitude": @654321, @"speed": @50};
+            });
+
+            afterEach(^{
+                locationJSON = nil;
+            });
+
+            it(@"should pass the updated location to the delegate", ^{
+                [manager sallyCommunicator: nil didUpdateLocation: locationJSON];
+
+                expect(delegate.location).toNot.beNil();
+                expect(delegate.location.locationId).to.equal(1);
+                expect(delegate.location.time).toNot.beNil();
+                expect(delegate.location.travelDirection).to.equal(@"North");
+                expect(delegate.location.latitude).to.equal(123456);
+                expect(delegate.location.longitude).to.equal(654321);
+                expect(delegate.location.travelSpeed).to.equal(50);
+            });
+
+            it(@"should not notify the delegate of any errors", ^{
+                [manager sallyCommunicator: nil didUpdateLocation: locationJSON];
+
+                expect(delegate.error).to.beNil();
+            });
+        });
+
+        context(@"failure", ^{
+            __block NSError *communicatorError;
+
+            beforeEach(^{
+                communicatorError = [NSError errorWithDomain: @"Test domain" code: 0 userInfo: nil];
+            });
+
+            afterEach(^{
+                communicatorError = nil;
+            });
+
+            it(@"should return a higher-level error to delegate", ^{
+                [manager sallyCommunicator: nil updateLocationFailedWithError: communicatorError];
+
+                expect(delegate.error).toNot.equal(communicatorError);
+                expect([delegate.error domain]).to.equal(SallyManagerErrors);
+                expect([delegate.error code]).to.equal(SallyManagerErrorUpdateLocation);
+            });
+
+            it(@"should include underlying error", ^{
+                [manager sallyCommunicator: nil updateLocationFailedWithError: communicatorError];
+
+                expect([[delegate.error userInfo] objectForKey: NSUnderlyingErrorKey]).to.equal(communicatorError);
+            });
+        });
+    });
 });
 
 SpecEnd

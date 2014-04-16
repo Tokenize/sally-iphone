@@ -35,13 +35,14 @@
 extern NSString *SallyManagerErrors;
 
 enum {
+    SallyManagerErrorSignIn,
     SallyManagerErrorTripFetchCode,
     SallyManagerErrorCreateTrip,
     SallyManagerErrorUpdateTrip,
     SallyManagerErrorDeleteTrip,
     SallyManagerErrorLocationFetchCode,
     SallyManagerErrorCreateLocation,
-    SallyManagerErrorSignIn
+    SallyManagerErrorUpdateLocation
 };
 
 #pragma mark - Properties

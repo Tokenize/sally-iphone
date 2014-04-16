@@ -42,5 +42,7 @@
 - (void)sallyManager:(SallyManager *)manager fetchLocationsForTripFailedWithError:(NSError *)error;
 - (void)sallyManager:(SallyManager *)manager didCreateLocation:(Location *)location;
 - (void)sallyManager:(SallyManager *)manager createLocationFailedWithError:(NSError *)error;
+- (void)sallyManager:(SallyManager *)manager didUpdateLocation:(Location *)location;
+- (void)sallyManager:(SallyManager *)manager updateLocationFailedWithError:(NSError *)error;
 
 @end

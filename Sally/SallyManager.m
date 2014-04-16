@@ -171,6 +171,21 @@ NSString *SallyManagerErrors = @"SallyManagerError";
     [delegate sallyManager: self fetchLocationsForTripFailedWithError: reportableError];
 }
 
+- (void)sallyCommunicator:(SallyCommunicator *)communicator didUpdateLocation:(NSDictionary *)locationJSON
+{
+    Location *location = [MTLJSONAdapter modelOfClass: Location.class fromJSONDictionary: locationJSON error: nil];
+
+    [self.delegate sallyManager: self didUpdateLocation: location];
+}
+
+- (void)sallyCommunicator:(SallyCommunicator *)communicator updateLocationFailedWithError:(NSError *)error
+{
+    NSDictionary *errorInfo = [NSDictionary dictionaryWithObject: error forKey: NSUnderlyingErrorKey];
+    NSError *reportableError = [NSError errorWithDomain: SallyManagerErrors code: SallyManagerErrorUpdateLocation userInfo: errorInfo];
+
+    [self.delegate sallyManager: self updateLocationFailedWithError: reportableError];
+}
+
 @end
 
 
