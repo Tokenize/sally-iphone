@@ -42,7 +42,8 @@ enum {
     SallyManagerErrorDeleteTrip,
     SallyManagerErrorLocationFetchCode,
     SallyManagerErrorCreateLocation,
-    SallyManagerErrorUpdateLocation
+    SallyManagerErrorUpdateLocation,
+    SallyManagerErrorDeleteLocation
 };
 
 #pragma mark - Properties

@@ -96,4 +96,14 @@
     self.error = updateError;
 }
 
+- (void)sallyManager:(SallyManager *)manager didDeleteLocation:(Location *)deletedLocation
+{
+    self.location = deletedLocation;
+}
+
+- (void)sallyManager:(SallyManager *)manager deleteLocationFailedWithError:(NSError *)deleteError
+{
+    self.error = deleteError;
+}
+
 @end
