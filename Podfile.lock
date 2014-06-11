@@ -1,42 +1,40 @@
 PODS:
-  - AFNetworking (2.2.1):
+  - AFNetworking (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.2.1):
+  - AFNetworking/NSURLConnection (2.2.4):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.2.1):
+  - AFNetworking/NSURLSession (2.2.4):
     - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.2.1)
-  - AFNetworking/Security (2.2.1)
-  - AFNetworking/Serialization (2.2.1)
-  - AFNetworking/UIKit (2.2.1):
+  - AFNetworking/Reachability (2.2.4)
+  - AFNetworking/Security (2.2.4)
+  - AFNetworking/Serialization (2.2.4)
+  - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - Expecta (0.3.0)
-  - Mantle (1.4.1):
+  - Mantle (1.5):
     - Mantle/extobjc
-  - Mantle/extobjc (1.4.1)
-  - Nocilla (0.8.1)
-  - Specta (0.2.1)
+  - Mantle/extobjc (1.5)
+  - SallyCocoa (0.0.1):
+    - AFNetworking (~> 2.0)
+    - Mantle (~> 1.5)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.0)
-  - Expecta
-  - Mantle
-  - Nocilla
-  - Specta
+  - SallyCocoa (from `https://github.com/Tokenize/sally-cocoa.git`)
+
+EXTERNAL SOURCES:
+  SallyCocoa:
+    :git: https://github.com/Tokenize/sally-cocoa.git
 
 SPEC CHECKSUMS:
-  AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
-  Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
-  Mantle: 0714cdb2b8559d9e6c2410d6a8529e3307bff189
-  Nocilla: 0c8075046df476b1bc6482caa7f6a69db1a9b277
-  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  SallyCocoa: 825c5adfbcafdaf750e8d905b7462404942ad9f8
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.33.1

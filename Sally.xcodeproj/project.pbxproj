@@ -8,13 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A45AAF38C88B4D749D1E7734 /* libPods-SallyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */; };
-		B813A4EB18F78A790006F044 /* AuthenticationWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */; };
-		B851F77D189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
-		B851F77E189732560099A787 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F77C189732560099A787 /* User.m */; };
-		B851F7811897327E0099A787 /* UserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F7801897327E0099A787 /* UserSpec.m */; };
-		B851F784189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
-		B851F785189741A60099A787 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F783189741A60099A787 /* Trip.m */; };
-		B851F787189742A80099A787 /* TripSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B851F786189742A80099A787 /* TripSpec.m */; };
 		B859630A1888BEAE000588B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85963091888BEAE000588B1 /* Foundation.framework */; };
 		B859630C1888BEAE000588B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630B1888BEAE000588B1 /* CoreGraphics.framework */; };
 		B859630E1888BEAE000588B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630D1888BEAE000588B1 /* UIKit.framework */; };
@@ -28,19 +21,6 @@
 		B859632A1888BEAE000588B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85963091888BEAE000588B1 /* Foundation.framework */; };
 		B859632B1888BEAE000588B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859630D1888BEAE000588B1 /* UIKit.framework */; };
 		B85963331888BEAE000588B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B85963311888BEAE000588B1 /* InfoPlist.strings */; };
-		B88ADB5118989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
-		B88ADB5218989A2800E4BD4A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5018989A2800E4BD4A /* Location.m */; };
-		B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B88ADB5318989F1E00E4BD4A /* LocationSpec.m */; };
-		B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */; };
-		B8C7E5AB18B2735F009FE36C /* LocationWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */; };
-		B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */; };
-		B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */; };
-		B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
-		B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E42CF1189F30C300305874 /* SallyCommunicator.m */; };
-		B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
-		B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A96189F2282003A80A0 /* SallyManager.m */; };
-		B8F01A9A189F23BC003A80A0 /* TripWorkflowSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */; };
-		B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */; };
 		C54CC3ECBC1647B68B94CDB1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E55BECDE87D43E98C7AE469 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,14 +38,6 @@
 		075C483F84A3447B81D5AFC3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		91874209E5A1424EA5ECF5B2 /* Pods-SallyTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SallyTests.xcconfig"; path = "Pods/Pods-SallyTests.xcconfig"; sourceTree = "<group>"; };
 		9E55BECDE87D43E98C7AE469 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationWorkflowSpec.m; sourceTree = "<group>"; };
-		B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicatorDelegate.h; sourceTree = "<group>"; };
-		B851F77B189732560099A787 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		B851F77C189732560099A787 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		B851F7801897327E0099A787 /* UserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSpec.m; sourceTree = "<group>"; };
-		B851F782189741A60099A787 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
-		B851F783189741A60099A787 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
-		B851F786189742A80099A787 /* TripSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripSpec.m; sourceTree = "<group>"; };
 		B85963061888BEAE000588B1 /* Sally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85963091888BEAE000588B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B859630B1888BEAE000588B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,23 +56,6 @@
 		B85963281888BEAE000588B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B85963301888BEAE000588B1 /* SallyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SallyTests-Info.plist"; sourceTree = "<group>"; };
 		B85963321888BEAE000588B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B88ADB4F18989A2800E4BD4A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		B88ADB5018989A2800E4BD4A /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		B88ADB5318989F1E00E4BD4A /* LocationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSpec.m; sourceTree = "<group>"; };
-		B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicator.h; sourceTree = "<group>"; };
-		B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicator.m; sourceTree = "<group>"; };
-		B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationWorkflowSpec.m; sourceTree = "<group>"; };
-		B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicatorSpec.m; sourceTree = "<group>"; };
-		B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyCommunicatorDelegate.h; sourceTree = "<group>"; };
-		B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyCommunicatorDelegate.m; sourceTree = "<group>"; };
-		B8E42CF0189F30C300305874 /* SallyCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyCommunicator.h; sourceTree = "<group>"; };
-		B8E42CF1189F30C300305874 /* SallyCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyCommunicator.m; sourceTree = "<group>"; };
-		B8F01A95189F2282003A80A0 /* SallyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManager.h; sourceTree = "<group>"; };
-		B8F01A96189F2282003A80A0 /* SallyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SallyManager.m; sourceTree = "<group>"; };
-		B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripWorkflowSpec.m; sourceTree = "<group>"; };
-		B8F01A9D189F2681003A80A0 /* SallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SallyManagerDelegate.h; sourceTree = "<group>"; };
-		B8F01A9F189F2702003A80A0 /* MockSallyManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockSallyManagerDelegate.h; sourceTree = "<group>"; };
-		B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockSallyManagerDelegate.m; sourceTree = "<group>"; };
 		C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SallyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,29 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B851F77A1897322C0099A787 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B851F77B189732560099A787 /* User.h */,
-				B851F77C189732560099A787 /* User.m */,
-				B851F782189741A60099A787 /* Trip.h */,
-				B851F783189741A60099A787 /* Trip.m */,
-				B88ADB4F18989A2800E4BD4A /* Location.h */,
-				B88ADB5018989A2800E4BD4A /* Location.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		B851F77F189732630099A787 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				B851F7801897327E0099A787 /* UserSpec.m */,
-				B851F786189742A80099A787 /* TripSpec.m */,
-				B88ADB5318989F1E00E4BD4A /* LocationSpec.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		B85962FD1888BEAE000588B1 = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				B8F01A9B189F25CD003A80A0 /* Delegates */,
-				B851F77A1897322C0099A787 /* Models */,
 				B85963181888BEAE000588B1 /* AppDelegate.h */,
 				B85963191888BEAE000588B1 /* AppDelegate.m */,
 				B859631B1888BEAE000588B1 /* Main.storyboard */,
@@ -199,10 +130,6 @@
 				B859631F1888BEAE000588B1 /* ViewController.m */,
 				B85963211888BEAE000588B1 /* Images.xcassets */,
 				B85963101888BEAE000588B1 /* Supporting Files */,
-				B8F01A95189F2282003A80A0 /* SallyManager.h */,
-				B8F01A96189F2282003A80A0 /* SallyManager.m */,
-				B8E42CF0189F30C300305874 /* SallyCommunicator.h */,
-				B8E42CF1189F30C300305874 /* SallyCommunicator.m */,
 			);
 			path = Sally;
 			sourceTree = "<group>";
@@ -221,13 +148,7 @@
 		B859632E1888BEAE000588B1 /* SallyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B8F01A9C189F25D9003A80A0 /* Mocks */,
-				B851F77F189732630099A787 /* Models */,
 				B859632F1888BEAE000588B1 /* Supporting Files */,
-				B8F01A99189F23BC003A80A0 /* TripWorkflowSpec.m */,
-				B8C7E5AA18B2735F009FE36C /* LocationWorkflowSpec.m */,
-				B8D71A5518E2658300C3C084 /* SallyCommunicatorSpec.m */,
-				B813A4EA18F78A790006F044 /* AuthenticationWorkflowSpec.m */,
 			);
 			path = SallyTests;
 			sourceTree = "<group>";
@@ -244,23 +165,8 @@
 		B8F01A9B189F25CD003A80A0 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				B8F01A9D189F2681003A80A0 /* SallyManagerDelegate.h */,
-				B823916F18D7C59B00914ED9 /* SallyCommunicatorDelegate.h */,
 			);
 			name = Delegates;
-			sourceTree = "<group>";
-		};
-		B8F01A9C189F25D9003A80A0 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				B8F01A9F189F2702003A80A0 /* MockSallyManagerDelegate.h */,
-				B8F01AA0189F2702003A80A0 /* MockSallyManagerDelegate.m */,
-				B88F0D5B18A07D530064E7FA /* MockSallyCommunicator.h */,
-				B88F0D5C18A07D530064E7FA /* MockSallyCommunicator.m */,
-				B8D71A5718E266BE00C3C084 /* MockSallyCommunicatorDelegate.h */,
-				B8D71A5818E266BE00C3C084 /* MockSallyCommunicatorDelegate.m */,
-			);
-			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,13 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B851F784189741A60099A787 /* Trip.m in Sources */,
-				B8F01A97189F2282003A80A0 /* SallyManager.m in Sources */,
-				B851F77D189732560099A787 /* User.m in Sources */,
 				B85963201888BEAE000588B1 /* ViewController.m in Sources */,
-				B8E42CF2189F30C300305874 /* SallyCommunicator.m in Sources */,
 				B859631A1888BEAE000588B1 /* AppDelegate.m in Sources */,
-				B88ADB5118989A2800E4BD4A /* Location.m in Sources */,
 				B85963161888BEAE000588B1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,21 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B851F785189741A60099A787 /* Trip.m in Sources */,
-				B88F0D5D18A07D530064E7FA /* MockSallyCommunicator.m in Sources */,
-				B8F01A98189F2282003A80A0 /* SallyManager.m in Sources */,
-				B8D71A5618E2658300C3C084 /* SallyCommunicatorSpec.m in Sources */,
-				B851F77E189732560099A787 /* User.m in Sources */,
-				B851F787189742A80099A787 /* TripSpec.m in Sources */,
-				B8D71A5918E266BE00C3C084 /* MockSallyCommunicatorDelegate.m in Sources */,
-				B88ADB5418989F1E00E4BD4A /* LocationSpec.m in Sources */,
-				B8F01A9A189F23BC003A80A0 /* TripWorkflowSpec.m in Sources */,
-				B8E42CF3189F30C300305874 /* SallyCommunicator.m in Sources */,
-				B8F01AA1189F2702003A80A0 /* MockSallyManagerDelegate.m in Sources */,
-				B813A4EB18F78A790006F044 /* AuthenticationWorkflowSpec.m in Sources */,
-				B88ADB5218989A2800E4BD4A /* Location.m in Sources */,
-				B8C7E5AB18B2735F009FE36C /* LocationWorkflowSpec.m in Sources */,
-				B851F7811897327E0099A787 /* UserSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
