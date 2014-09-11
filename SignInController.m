@@ -41,9 +41,9 @@
     [self.statusLabel setText: @"Invalid email or password"];
 }
 
-- (void)viewDidLoad
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewDidAppear: animated];
 
     _manager = [[SallyManager alloc] init];
     _manager.communicator = [SallyCommunicator sharedSallyCommunicator];
