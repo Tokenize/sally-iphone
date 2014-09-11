@@ -66,31 +66,50 @@
                         <outlet property="emailField" destination="Vmd-f8-Fbd" id="XSb-fd-DeK"/>
                         <outlet property="passwordField" destination="pJK-7s-LPP" id="cg2-yY-v6S"/>
                         <outlet property="statusLabel" destination="not-sf-zer" id="aBg-Ud-ApS"/>
-                        <segue destination="65i-bQ-6mf" kind="push" identifier="trips" id="sn0-1Q-6N2"/>
+                        <segue destination="D44-md-3Y3" kind="push" identifier="trips" id="HlU-tn-y1Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="835" y="54"/>
         </scene>
-        <!--View Controller - Trips-->
-        <scene sceneID="6uI-qF-qWe">
+        <!--Trips Controller - Trips-->
+        <scene sceneID="gpl-TG-woh">
             <objects>
-                <viewController id="65i-bQ-6mf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Mzi-9g-vMa"/>
-                        <viewControllerLayoutGuide type="bottom" id="B2q-Pk-OeZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hke-fF-a8D">
+                <tableViewController title="Trips" id="D44-md-3Y3" customClass="TripsController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0vz-YX-R38">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Trips" id="nF5-Wl-pjX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AFp-sP-KUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tripCell" textLabel="zfJ-mD-cYy" style="IBUITableViewCellStyleDefault" id="ARP-lk-WB8">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARP-lk-WB8" id="87H-P8-0i8">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zfJ-mD-cYy">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D44-md-3Y3" id="nci-vt-KlI"/>
+                            <outlet property="delegate" destination="D44-md-3Y3" id="Lgz-T0-7np"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Trips" id="OEx-0x-lab"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoc-rQ-eyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="62"/>
+            <point key="canvasLocation" x="1358" y="54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="02n-Q3-2oK">
