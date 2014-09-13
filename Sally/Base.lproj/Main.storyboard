@@ -186,10 +186,10 @@
             </objects>
             <point key="canvasLocation" x="1806" y="49"/>
         </scene>
-        <!--View Controller - Tracking...-->
+        <!--Track Locations Controller - Tracking...-->
         <scene sceneID="tUV-WR-AlV">
             <objects>
-                <viewController id="CDi-qp-Gf1" sceneMemberID="viewController">
+                <viewController id="CDi-qp-Gf1" customClass="TrackLocationsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mTO-na-rjg"/>
                         <viewControllerLayoutGuide type="bottom" id="q0F-wM-bZS"/>
@@ -197,9 +197,18 @@
                     <view key="view" contentMode="scaleToFill" id="fdW-4R-d6o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gAm-lc-VV2">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tracking..." id="aK0-vo-Ffk"/>
+                    <connections>
+                        <outlet property="locationSpinner" destination="gAm-lc-VV2" id="LY4-jZ-5uw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gt-Ks-wu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

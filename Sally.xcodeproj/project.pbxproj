@@ -23,6 +23,7 @@
 		B85DC12719ABF44E00B40552 /* SignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = B85DC12619ABF44E00B40552 /* SignInController.m */; };
 		B88D229719C1212E00AF06EF /* TripsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B88D229619C1212E00AF06EF /* TripsController.m */; };
 		B8BE68F219C268C2007D50B8 /* NewTripController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE68F119C268C2007D50B8 /* NewTripController.m */; };
+		B8BE68F519C27B96007D50B8 /* TrackLocationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BE68F419C27B96007D50B8 /* TrackLocationsController.m */; };
 		C54CC3ECBC1647B68B94CDB1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E55BECDE87D43E98C7AE469 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		B88D229619C1212E00AF06EF /* TripsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripsController.m; sourceTree = "<group>"; };
 		B8BE68F019C268C2007D50B8 /* NewTripController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTripController.h; sourceTree = "<group>"; };
 		B8BE68F119C268C2007D50B8 /* NewTripController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTripController.m; sourceTree = "<group>"; };
+		B8BE68F319C27B96007D50B8 /* TrackLocationsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackLocationsController.h; sourceTree = "<group>"; };
+		B8BE68F419C27B96007D50B8 /* TrackLocationsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackLocationsController.m; sourceTree = "<group>"; };
 		C3D46A723A8D471BBBD9BD61 /* libPods-SallyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SallyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,8 @@
 				B88D229619C1212E00AF06EF /* TripsController.m */,
 				B8BE68F019C268C2007D50B8 /* NewTripController.h */,
 				B8BE68F119C268C2007D50B8 /* NewTripController.m */,
+				B8BE68F319C27B96007D50B8 /* TrackLocationsController.h */,
+				B8BE68F419C27B96007D50B8 /* TrackLocationsController.m */,
 				B85963211888BEAE000588B1 /* Images.xcassets */,
 				B85963101888BEAE000588B1 /* Supporting Files */,
 			);
@@ -347,6 +352,7 @@
 				B859631A1888BEAE000588B1 /* AppDelegate.m in Sources */,
 				B88D229719C1212E00AF06EF /* TripsController.m in Sources */,
 				B85963161888BEAE000588B1 /* main.m in Sources */,
+				B8BE68F519C27B96007D50B8 /* TrackLocationsController.m in Sources */,
 				B8BE68F219C268C2007D50B8 /* NewTripController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

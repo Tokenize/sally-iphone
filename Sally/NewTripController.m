@@ -7,6 +7,7 @@
 //
 
 #import "NewTripController.h"
+#import "TrackLocationsController.h"
 #import "SallyManager.h"
 #import "SallyCommunicator.h"
 #import "Trip.h"
@@ -32,6 +33,8 @@
 
 - (void)sallyManager:(SallyManager *)manager didCreateTrip:(Trip *)trip
 {
+    _trip = trip;
+
     [self performSegueWithIdentifier: @"trackLocations" sender: self];
 }
 
@@ -50,15 +53,17 @@
     _manager.delegate = self;
 }
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString: @"trackLocations"]) {
+        if ([segue.destinationViewController isKindOfClass: [TrackLocationsController class]]) {
+            TrackLocationsController *trackingController = (TrackLocationsController *)segue.destinationViewController;
+
+            trackingController.trip = [_trip copy];
+        }
+    }
 }
-*/
 
 @end
